@@ -1,0 +1,750 @@
+/* HERO SECTION (Original) */
+.hero {
+    height: 85vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 20px;
+    margin-top: 60px;
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #cbd5e1;
+    font-weight: 300;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: var(--accent);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent);
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--accent);
+}
+
+/* RESET & BASE */
+.section-title {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--primary);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-subtitle {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #64748b;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.section-title.light-mode {
+    color: #ffffff;
+}
+
+.section-subtitle.light-mode {
+    color: #cbd5e1;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: #f9f9f9;
+}
+
+:root {
+    --primary: #111111;
+    --accent: #c5a059;
+    --text: #334155;
+    --white: #ffffff;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 80px 5%;
+    background: var(--white);
+}
+
+.feature-card {
+    padding: 40px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+/* FOOTER */
+footer {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer p {
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+        color: var(--primary);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* SERVICES SECTION (Optimized with SVGs) */
+.services-section {
+    padding: 70px 5%;
+    background: #ffffff;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    padding: 40px 30px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    /* Para alinear botones al fondo */
+    height: 100%;
+    /* Forza altura igual */
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.08);
+}
+
+.service-icon {
+    width: 60px;
+    /* Lo subí un poco para más presencia */
+    height: 60px;
+    margin-bottom: 25px;
+    fill: var(--accent);
+    /* Color dorado automático */
+    align-self: center;
+    /* <--- LA LÍNEA MÁGICA PARA CENTRARLO */
+}
+
+.service-card h3 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.service-card p {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.8;
+    flex-grow: 1;
+    /* EL TRUCO: Empuja el botón al fondo */
+}
+
+.card-link {
+    color: var(--primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    /* Alinea a la izquierda */
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    transition: 0.3s;
+}
+
+.service-card:hover .card-link {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+/* OFFICES SECTION - ACCORDION */
+.offices-section {
+    display: flex;
+    height: 500px;
+    /* Altura imponente */
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+.office-card {
+    flex: 1;
+    /* Todos ocupan lo mismo al inicio */
+    position: relative;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    /* Animación suave estilo Apple */
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    /* Texto abajo */
+    cursor: pointer;
+    filter: grayscale(100%);
+    /* Efecto elegante: B/N por defecto */
+}
+
+/* TEAM SECTION */
+.team-section {
+    padding: 100px 5%;
+    background: #ffffff;
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.attorney-card {
+    position: relative;
+    background: #fff;
+    transition: all 0.4s ease;
+}
+
+.attorney-image-wrapper {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    background: #f1f5f9;
+}
+
+.attorney-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.attorney-card:hover .attorney-image-wrapper img {
+    transform: scale(1.05);
+}
+
+.attorney-info {
+    padding: 25px 0;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.attorney-name {
+    font-size: 1.5rem;
+    color: var(--primary);
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    letter-spacing: -0.5px;
+}
+
+.attorney-role {
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.attorney-bio-snippet {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.attorney-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 17, 17, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.attorney-card:hover .attorney-overlay {
+    transform: translateY(0);
+}
+
+.attorney-overlay-role {
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.attorney-overlay-bio {
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.view-profile-btn {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.view-profile-btn::after {
+    content: '+';
+    font-size: 1.2rem;
+    margin-left: 8px;
+    color: var(--accent);
+    transition: transform 0.3s;
+}
+
+.attorney-card:hover .view-profile-btn {
+    color: var(--accent);
+}
+
+.attorney-card:hover .view-profile-btn::after {
+    transform: rotate(90deg);
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    padding: 100px 5%;
+    background: #f8fafc;
+    /* Gris muy muy claro para diferenciar del blanco */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Mitad y mitad */
+    gap: 60px;
+    align-items: center;
+}
+
+.contact-info {
+    padding-right: 30px;
+}
+
+.contact-info h2 {
+    text-align: left;
+    /* Alineamos a la izquierda aquí */
+    margin-left: 0;
+}
+
+.contact-info p {
+    text-align: left;
+    margin-left: 0;
+    font-size: 1.1rem;
+}
+
+.urgent-call {
+    margin-top: 30px;
+    padding: 30px;
+    background: #fff;
+    border-left: 5px solid var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.urgent-call h4 {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.phone-display {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent);
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+/* FORM STYLES */
+.contact-form-wrapper {
+    background: #fff;
+    padding: 50px;
+    border-radius: 4px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+    /* Sombra de lujo */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f8fafc;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    /* Brillo dorado al escribir */
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 18px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #b08d4b;
+    /* Dorado un poco más oscuro */
+}
+
+/* Imágenes optimizadas & WebP */
+
+.office-hc {
+    background: #2c3e50 url('../img/venturaOffice.png') center/cover no-repeat;
+}
+
+.office-hemet {
+    background: #2c3e50 url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60') center/cover no-repeat;
+}
+
+.office-pd {
+    background: #c0392b url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60') center/cover no-repeat;
+}
+
+.office-riv {
+    background: #7f8c8d url('https://images.unsplash.com/photo-1486325212027-8081e485255e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60&fm=webp') center/cover no-repeat;
+}
+
+/* Capa oscura para que el texto se lea siempre */
+.office-card {
+    flex: 1;
+    position: relative;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    filter: grayscale(100%);
+
+    /* --- AGREGA ESTA LÍNEA MÁGICA --- */
+    will-change: flex-grow, filter;
+    /* Esto elimina el tartamudeo en la animación */
+}
+
+/* ESTADO HOVER (La Magia) */
+.office-card:hover {
+    flex: 3.5;
+    /* Se expande mucho */
+    filter: grayscale(0%);
+    /* Recupera el color */
+}
+
+/* Cuando haces hover en uno, oscurece más a los otros (opcional, visual) */
+.offices-section:hover .office-card:not(:hover)::before {
+    background: rgba(15, 23, 42, 0.9);
+}
+
+.office-content {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    width: 100%;
+    transform: translateY(0);
+    transition: 0.4s;
+}
+
+.office-city {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.office-city::before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background: var(--accent);
+    margin-right: 15px;
+    transition: width 0.3s;
+}
+
+.office-card:hover .office-city::before {
+    width: 60px;
+    /* La línea crece al expandir */
+}
+
+.office-details {
+    max-height: 0;
+    /* Oculto por defecto */
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    font-size: 0.95rem;
+    color: #cbd5e1;
+}
+
+.office-card:hover .office-details {
+    max-height: 200px;
+    /* Se muestra al expandir */
+    opacity: 1;
+    margin-top: 15px;
+}
+
+.office-btn {
+    margin-top: 15px;
+    display: inline-block;
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+}
+
+/* RESPONSIVE (Móvil) */
+@media (max-width: 768px) {
+    .offices-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .office-card {
+        height: 250px;
+        width: 100%;
+        filter: grayscale(0%);
+    }
+
+    .office-card:hover {
+        flex: 1;
+        /* Desactivar expansión en móvil */
+    }
+
+    .office-details {
+        max-height: 200px;
+        opacity: 1;
+        margin-top: 10px;
+    }
+
+    /* Mostrar info siempre en móvil */
+}
+
+/* SETTLEMENTS / RESULTS SECTION */
+.results-section {
+    background-color: var(--primary);
+    /* Fondo Azul Oscuro */
+    color: var(--white);
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.result-item {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Borde sutil */
+    padding: 40px 20px;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.result-item:hover {
+    background: rgba(255, 255, 255, 0.03);
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.amount {
+    display: block;
+    font-size: 3.5rem;
+    /* GIGANTE */
+    font-weight: 800;
+    color: var(--accent);
+    /* Dorado */
+    margin-bottom: 10px;
+    line-height: 1;
+    font-family: 'Helvetica Neue', sans-serif;
+    /* O la fuente que uses de números */
+}
+
+.case-type {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: var(--white);
+}
+
+.case-desc {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    font-style: italic;
+}
+
+.disclaimer {
+    margin-top: 60px;
+    font-size: 0.75rem;
+    color: #64748b;
+    opacity: 0.6;
+}
