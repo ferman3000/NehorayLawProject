@@ -27,6 +27,14 @@ get_header(); ?>
             <div class="office-mini-item">
                 <div class="office-mini-title">
                     <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    Headquarters
+                </div>
+                <div class="office-mini-address">16542 Ventura Boulevard Suite 417<br>Encino, CA 91436</div>
+            </div>
+
+            <div class="office-mini-item">
+                <div class="office-mini-title">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
                     Hemet Office
                 </div>
                 <div class="office-mini-address">1600 E Florida Ave<br>Hemet, CA 92544</div>
@@ -53,14 +61,14 @@ get_header(); ?>
                     <h4>Phone</h4>
                     <p>(888) 595-4LAW</p>
                 </div>
-                <div class="channel-item">
+                <!-- <div class="channel-item">
                     <h4>Live Chat</h4>
                     <p style="color: var(--accent);">24/7 Support</p>
-                </div>
+                </div> -->
             </div>
         </aside>
-
-        <main class="form-side-wrapper">
+        <?php echo do_shortcode( '[contact-form-7 id="063833b" title="Contact Form"]' ); ?> 
+        <!-- <main class="form-side-wrapper">
             <div class="form-header">
                 <h2>Request Case Review</h2>
             </div>
@@ -95,7 +103,7 @@ get_header(); ?>
                 <button type="submit" class="submit-btn">Request Free Review</button>
             </form>
         </div>
-        </main>
+        </main> -->
 
     </div>
 

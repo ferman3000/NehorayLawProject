@@ -12,7 +12,7 @@ get_header();
         <div class="hero-content">
             <h1>Relentless Justice. <br>Proven Results.</h1>
             <p>We fight for your rights when it matters most. Expert legal representation in Los Angeles.</p>
-            <a href="#" class="btn">Get a Free Consultation</a>
+            <a href="<?php echo home_url('/contact'); ?>" class="btn">Get a Free Consultation</a>
         </div>
     </section>
 
@@ -75,8 +75,28 @@ get_header();
         </div>
     </section>
 
+    <section class="cta-banner">
+        <div class="cta-overlay"></div> <div class="cta-container">
+            
+            <div class="cta-text-group">
+                <h2 class="cta-question">Injured on the job?</h2>
+                <h3 class="cta-big-title">CALL BOB</h3>
+            </div>
+
+            <div class="cta-divider"></div>
+
+<div class="cta-action-group">
+                <div class="cta-number-display">
+                    <span class="material-icon">📞</span>
+                    (888) 595-4LAW
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <section>
-        <div style="text-align: center; padding: 20px 20px 40px; background: #fff;">
+        <div style="text-align: center; padding: 70px 20px 40px; background: #fff;">
             <h2 class="section-title">Our Locations</h2>
             <p class="section-subtitle">Serving clients across California with offices strategically located for your
                 convenience.</p>
@@ -87,7 +107,7 @@ get_header();
                 <div class="office-content">
                     <h3 class="office-city">Headquarters</h3>
                     <div class="office-details">
-                        <p>1600 E Florida Ave<br>Encino, CA 91436</p>
+                        <p>16542 Ventura Boulevard Suite 417<br>Encino, CA 91436</p>
                         <p><strong>Phone:</strong> (888) 595-4LAW</p>
                     </div>
                 </div>
@@ -161,7 +181,7 @@ get_header();
 
         <p class="disclaimer">* Examples of past cases. Results vary depending on the facts of each case.</p>
     </section> -->
-  <section class="team-section">
+  <!-- <section class="team-section">
         <h2 class="section-title">Meet The Team</h2>
         <p class="section-subtitle">Experienced litigators dedicated to protecting your rights and securing your future.
         </p>
@@ -212,8 +232,8 @@ get_header();
                 </div>
             </article>
         </div>
-    </section>
-    <section id="contact" class="contact-section">
+    </section> -->
+   <section id="contact" class="contact-section">
         
         <div class="contact-info">
             <h2 class="section-title">Get a Free Consultation</h2>
@@ -226,9 +246,12 @@ get_header();
                 <a href="tel:888-555-0123" class="phone-display">(888) 595-4LAW</a>
                 <p style="margin-top: 10px; font-size: 0.9rem; color: #64748b; text-align: center;">Se Habla Español</p>
             </div>
-        </div>
+        </div> 
 
-        <div class="contact-form-wrapper">
+        <?php echo do_shortcode( '[contact-form-7 id="c06dbd5" title="Contact form 1"]' ); ?> 
+
+        <!-- <div class="contact-form-wrapper">
+            
             <form>
                 <div class="form-group">
                     <label class="form-label">Full Name</label>
@@ -256,8 +279,8 @@ get_header();
                 </div>
 
                 <button type="submit" class="submit-btn">Request Free Review</button>
-            </form>
-        </div>
+            </form> 
+         </div> -->
 
     </section>
 

@@ -581,6 +581,28 @@ footer p {
     /* --- AGREGA ESTA LÍNEA MÁGICA --- */
     will-change: flex-grow, filter;
     /* Esto elimina el tartamudeo en la animación */
+    will-change: flex-grow, filter;
+    /* Esto elimina el tartamudeo en la animación */
+}
+
+/* --- FIX: Overlay con efecto Hover (0% -> 50%) --- */
+.office-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    /* Base: Sin filtro (transparente) */
+    z-index: 1;
+    pointer-events: none;
+    transition: background 0.3s ease;
+}
+
+.office-card:hover::before {
+    background: rgba(0, 0, 0, 0.5) !important;
+    /* Hover: 50% de oscuridad */
 }
 
 /* ESTADO HOVER (La Magia) */
@@ -599,6 +621,7 @@ footer p {
 .office-content {
     position: relative;
     z-index: 2;
+    /* Texto SIEMPRE encima */
     padding: 40px;
     width: 100%;
     transform: translateY(0);
@@ -747,4 +770,289 @@ footer p {
     font-size: 0.75rem;
     color: #64748b;
     opacity: 0.6;
+}
+
+/* CTA INTERMEDIO (Mid-Page Strip) */
+.cta-mid-strip {
+    background-color: #0f172a;
+    /* Azul Navy Oscuro (Tu color primario) */
+    padding: 50px 5%;
+    margin: 60px 0;
+    /* Espacio arriba y abajo para que respire */
+    border-top: 4px solid var(--accent, #c5a059);
+    /* Línea dorada superior elegante */
+    border-bottom: 4px solid var(--accent, #c5a059);
+    /* Línea dorada inferior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-strip-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* Texto a la izq, Botón a la der */
+    align-items: center;
+    flex-wrap: wrap;
+    /* Para que se adapte en celular */
+    gap: 30px;
+}
+
+.cta-text-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cta-icon {
+    font-size: 2.5rem;
+    animation: pulse 2s infinite;
+    /* Un latido suave para llamar la atención */
+}
+
+.cta-question {
+    font-size: 2.2rem;
+    color: #fff;
+    margin: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.cta-question strong {
+    color: var(--accent, #c5a059);
+    /* El "ON" en dorado */
+    font-weight: 900;
+}
+
+.cta-phone-btn {
+    background: var(--accent, #c5a059);
+    color: #0f172a;
+    padding: 15px 40px;
+    border-radius: 4px;
+    /* Bordes ligeramente redondeados */
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
+    /* Sombra dorada */
+    text-align: center;
+}
+
+.cta-phone-btn:hover {
+    background: #fff;
+    /* Al pasar el mouse se vuelve blanco */
+    color: #0f172a;
+    transform: translateY(-3px);
+    /* Se eleva un poquito */
+}
+
+.phone-number {
+    display: block;
+    font-size: 1.4rem;
+    /* El número más grande que "Call Bob" */
+}
+
+/* Animación sutil para el icono */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* RESPONSIVE (Celular) */
+@media (max-width: 768px) {
+    .cta-strip-container {
+        flex-direction: column;
+        /* Uno debajo del otro */
+        text-align: center;
+    }
+
+    .cta-text-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cta-question {
+        font-size: 1.8rem;
+    }
+
+    .cta-phone-btn {
+        width: 100%;
+        /* Botón ancho completo en celular */
+    }
+}
+
+
+/* =========================================
+   BANNER CTA "CALL BOB" (VERSIÓN FINAL)
+   ========================================= */
+
+.cta-banner {
+    position: relative;
+    width: 100%;
+    /* Fondo con oscuridad leve (0.3) para que se vea la foto */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Efecto Parallax */
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.cta-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    /* Lado a lado en PC */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 60px;
+}
+
+/* GRUPO DE TEXTO (IZQUIERDA) */
+.cta-text-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* Alineado a la derecha, pegado a la línea */
+    text-align: right;
+    line-height: 1;
+}
+
+.cta-question {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 5px;
+    line-height: 1.1;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.cta-big-title {
+    color: var(--accent);
+    font-size: 5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 0.9;
+    letter-spacing: -2px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* DIVISOR VERTICAL */
+.cta-divider {
+    width: 2px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.4);
+    /* Un poco más visible */
+    display: block;
+}
+
+/* GRUPO DE ACCIÓN (DERECHA) */
+.cta-action-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Alineado a la izquierda */
+    gap: 10px;
+}
+
+/* PLACA DEL NÚMERO (NO ES BOTÓN) */
+.cta-number-display {
+    background-color: var(--accent);
+    color: #111;
+    font-size: 1.8rem;
+    font-weight: 900;
+    padding: 18px 40px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+    cursor: default;
+    /* Flecha normal (no manito) */
+    user-select: text;
+    /* Permite copiar el número */
+    white-space: nowrap;
+}
+
+.cta-guarantee {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    margin-left: 5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.check-icon {
+    color: var(--accent);
+    margin-right: 5px;
+}
+
+/* RESPONSIVE (CELULAR) */
+@media (max-width: 900px) {
+    .cta-container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .cta-text-group {
+        align-items: center;
+        text-align: center;
+    }
+
+    .cta-question {
+        font-size: 1.8rem;
+    }
+
+    .cta-big-title {
+        font-size: 4rem;
+        line-height: 1;
+    }
+
+    .cta-divider {
+        width: 150px;
+        /* Línea horizontal larga */
+        height: 1px;
+        margin: 10px auto;
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .cta-action-group {
+        align-items: center;
+    }
+
+    .cta-number-display {
+        font-size: 1.4rem;
+        padding: 15px 30px;
+        width: 100%;
+        justify-content: center;
+    }
 }

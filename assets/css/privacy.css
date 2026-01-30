@@ -1,0 +1,82 @@
+.legal-hero {
+    background: linear-gradient(rgba(30, 41, 59, 0.9), rgba(30, 41, 59, 0.9)),
+        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 20px;
+    /* Un poco más de altura */
+    text-align: center;
+    margin-top: 60px;
+    height: 40vh;
+}
+
+.legal-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.legal-date {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Contenedor de Lectura (Estilo Hoja de Papel) */
+.legal-content {
+    padding: 60px 5%;
+    background: #fff;
+}
+
+.legal-container {
+    max-width: 800px;
+    /* Ancho ideal de lectura */
+    margin: 0 auto;
+}
+
+/* Tipografía Legal */
+.legal-container h2 {
+    font-size: 1.5rem;
+    color: #111;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 10px;
+}
+
+.legal-container p {
+    color: #475569;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.legal-container ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.legal-container li {
+    color: #475569;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Resaltar correos o datos importantes */
+.legal-highlight {
+    color: var(--accent, #c5a059);
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .legal-hero h1 {
+        font-size: 2rem;
+    }
+
+    .legal-content {
+        padding: 40px 20px;
+    }
+}

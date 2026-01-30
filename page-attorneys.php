@@ -50,7 +50,7 @@ get_header();
             </div>
         </div>
 
-        <h3 class="associates-title">Senior Associates</h3>
+        <!-- <h3 class="associates-title">Senior Associates</h3>
         
         <div class="team-grid">
             
@@ -87,7 +87,7 @@ get_header();
                 </div>
             </article>
 
-        </div>
+        </div> -->
     </section>
 
     <section class="referral-section">

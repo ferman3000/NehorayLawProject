@@ -354,6 +354,62 @@
             .lang-switch { display: none; }
         }
 
+        /* =========================================
+   LOGO TIPOGRÁFICO (INTEGRACIÓN PHP)
+   ========================================= */
+
+    /* 1. Limpiamos el contenedor viejo */
+    .logo {
+    display: flex;
+    align-items: center;
+}
+
+/* 2. Estilizamos el enlace (<a>) que ahora es .brand-logo */
+    .brand-logo {
+    display: flex;
+    flex-direction: column; /* Apila los textos verticalmente */
+    text-decoration: none !important; /* Fuerza quitar subrayado */
+    line-height: 1; 
+    justify-content: center;
+    color: inherit; /* Hereda el color del padre o usa blanco */
+}
+
+/* Texto Superior: "THE LAW OFFICES OF" */
+.brand-sub {
+    /* CAMBIO AQUÍ: Usamos negro (#111) o gris oscuro (#333) */
+    /* Si tu menú fuera negro, aquí pondrías #ffffff (blanco) */
+    color: #111111 !important; 
+    
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    margin-bottom: 3px;
+    display: block;
+}
+
+/* Texto Inferior: "BOB NEHORAY" */
+.brand-main {
+    /* Este se queda DORADO */
+    color: #c5a059; 
+    
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+}
+
+/* Hover */
+.brand-logo:hover .brand-main {
+    color: #d4ac5e;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .brand-sub { font-size: 0.55rem; letter-spacing: 1.5px; }
+    .brand-main { font-size: 1.4rem; }
+}
         /* TRUCO DE MAGIA: */
 /* El contenedor nace invisible para evitar el flash azul */
 #voiceflow-chat {
@@ -368,17 +424,23 @@
 <body <?php body_class(); ?>>
 
     <nav>
-        <div class="logo"><a href="<?php echo home_url('/'); ?>" style="text-decoration:none; color:inherit;">NEHORAY <span>LAW</span></a></div>
+        <div class="logo">
+            <a href="<?php echo home_url('/'); ?>" class="brand-logo">
+                <span class="brand-sub">Law Offices of</span>
+                <span class="brand-main">Bob Nehoray</span>
+            </a>
+        </div>
         <div class="nav-links">
             <a href="<?php echo home_url('/practice-areas'); ?>" class="<?php echo is_page('practice-areas') ? 'active' : ''; ?>" style="color: <?php echo is_page('practice-areas') ? 'var(--accent)' : 'var(--primary)'; ?>;">Practice Areas</a>
             <a href="<?php echo home_url('/attorneys'); ?>" class="<?php echo is_page('attorneys') ? 'active' : ''; ?>" style="color: <?php echo is_page('attorneys') ? 'var(--accent)' : 'var(--primary)'; ?>;">Attorneys</a>
             <a href="<?php echo home_url('/testimonies'); ?>" class="<?php echo is_page('testimonies') ? 'active' : ''; ?>" style="color: <?php echo is_page('testimonies') ? 'var(--accent)' : 'var(--primary)'; ?>;">Testimonials</a>
+            <a href="<?php echo home_url('/blog'); ?>" class="<?php echo ( ( is_home() && ! is_front_page() ) || is_single() ) ? 'active' : ''; ?>" style="color: <?php echo ( ( is_home() && ! is_front_page() ) || is_single() ) ? 'var(--accent)' : 'var(--primary)'; ?>;">Blog</a>
             <a href="<?php echo home_url('/contact'); ?>" class="<?php echo is_page('contact') ? 'active' : ''; ?>" style="color: <?php echo is_page('contact') ? 'var(--accent)' : 'var(--primary)'; ?>;">Contact</a>
-                        <div class="lang-switch">
+            <!-- <div class="lang-switch">
                 <span class="lang-opt active">EN</span>
                 <span class="lang-divider">|</span>
                 <span class="lang-opt">ES</span>
-            </div>
+            </div> -->
         </div>
         <div class="mobile-menu">☰</div>
     </nav>
