@@ -173,7 +173,8 @@ function nehoraynew_scripts() {
 
 	wp_style_add_data( 'nehoraynew-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'nehoraynew-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	/* script viejo eliminado */
+    wp_enqueue_script( 'nehoraynew-mobile-menu', get_template_directory_uri() . '/assets/js/mobile-menu.js', array(), time(), true );
 
     wp_enqueue_script( 'nehoraynew-main', get_template_directory_uri() . '/assets/js/main.js', array(), _S_VERSION, true );
 
@@ -332,3 +333,58 @@ function nehoray_save_author_data( $post_id ) {
     }
 }
 add_action( 'save_post', 'nehoray_save_author_data' );
+
+/**
+ * Antispam validation for contact form
+ */
+add_filter( 'wpcf7_spam', function( $spam ) {
+    // Si ya está marcado como spam, no hacemos nada
+    if ( $spam ) {
+        return $spam;
+    }
+
+    // Obtenemos los datos del envío
+    $submission = WPCF7_Submission::get_instance();
+    if ( $submission ) {
+        $posted_data = $submission->get_posted_data();
+
+        // Verificamos si la trampa tiene algo escrito
+        if ( ! empty( $posted_data['honeypot-trap'] ) ) {
+            // ¡AJÁ! Es un bot. Marcamos como spam.
+            return true;
+        }
+    }
+
+    return $spam;
+} );
+
+/**
+ * SANITIZACIÓN DE SEGURIDAD PARA CONTACT FORM 7
+ * Limpia todos los campos de código malicioso (HTML, Scripts) antes de procesarlos.
+ */
+add_filter( 'wpcf7_posted_data', function( $posted_data ) {
+    
+    // Recorremos cada campo enviado
+    foreach ( $posted_data as $key => $value ) {
+        
+        // 1. Si es un array (ej: checkboxes), limpiamos cada elemento
+        if ( is_array( $value ) ) {
+            $posted_data[$key] = array_map( 'sanitize_text_field', $value );
+        } 
+        // 2. Si es texto plano (inputs normales, textareas)
+        else {
+            // sanitize_text_field: Elimina etiquetas HTML, saltos de línea extraños y espacios vacíos.
+            // sanitize_textarea_field: Mantiene saltos de línea pero mata HTML/Scripts.
+            
+            if ( strpos( $key, 'your-message' ) !== false || strpos( $key, 'textarea' ) !== false ) {
+                // Para áreas de texto (permite saltos de línea, pero sin HTML)
+                $posted_data[$key] = sanitize_textarea_field( $value );
+            } else {
+                // Para inputs de una línea (Nombre, Asunto, etc.)
+                $posted_data[$key] = sanitize_text_field( $value );
+            }
+        }
+    }
+
+    return $posted_data;
+} );

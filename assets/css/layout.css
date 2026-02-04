@@ -162,4 +162,62 @@ footer p {
 /* =========================================
    5. RESPONSIVE
    ========================================= */
-/* (Pega aquí los media queries...) */
+@media (max-width: 768px) {
+    .header {
+        position: relative;
+    }
+
+    /* Ocultar menú normal y mostrar hamburguesa */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #f1f1f1;
+        z-index: 2000;
+        /* High z-index to sit on top */
+    }
+
+    /* ESTADO ACTIVO */
+    .nav-links.active {
+        display: flex !important;
+        /* Force display */
+        animation: slideDown 0.3s ease-out;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px 0;
+        border-bottom: 1px solid #f8fafc;
+        width: 100%;
+        text-align: center;
+        font-size: 1.1rem;
+        color: var(--primary);
+    }
+
+    .mobile-menu {
+        display: block;
+        color: var(--primary);
+        font-size: 2rem;
+        user-select: none;
+        cursor: pointer;
+        padding: 10px;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
