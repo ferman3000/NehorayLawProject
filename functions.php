@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( '_S_VERSION', '1.0.6' );
 }
 
 /**
@@ -165,6 +165,14 @@ function nehoraynew_scripts() {
     if ( is_page_template( 'page-privacy-policy.php' ) || is_page('privacy-policy') ) {
         wp_enqueue_style( 'nehoray-privacy', get_template_directory_uri() . '/assets/css/privacy.css', array('nehoraynew-style'), _S_VERSION );
     }
+
+    // Conditional Load for Practice Areas
+    if ( is_page_template( 'page-practice-areas.php' ) || is_page('practice-areas') ) {
+        wp_enqueue_style( 'nehoray-practice-areas', get_template_directory_uri() . '/assets/css/practice-areas.css', array('nehoraynew-style'), _S_VERSION );
+        wp_enqueue_style( 'nehoray-personal-injury', get_template_directory_uri() . '/assets/css/personal-injury.css', array('nehoray-practice-areas'), _S_VERSION );
+        wp_enqueue_style( 'nehoray-auto-accidents', get_template_directory_uri() . '/assets/css/auto-accidents.css', array('nehoray-practice-areas'), _S_VERSION );
+    }
+
 	// 2. NUEVO: Estilos para el Blog (Listado) Y Artículos individuales
     // Usamos is_home() para el listado y is_single() para el artículo
     if ( is_home() || is_single() ) {

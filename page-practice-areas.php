@@ -4,7 +4,7 @@ Template Name: Practice Areas
 */
 include 'header.php'; ?>
 
-<!-- HERO SECTION -->
+
 <section class="page-hero">
     <div class="hero-content">
         <h1>Practice Areas</h1>
@@ -12,23 +12,22 @@ include 'header.php'; ?>
     </div>
 </section>
 
-<!-- MAIN LAYOUT -->
+
 <div class="practice-container">
-    
-    <!-- LEFT SIDEBAR: ACCORDION -->
+   
     <aside class="practice-sidebar">
         <h3 class="sidebar-title">Legal Services</h3>
         
         <div class="accordion-menu">
             
-            <!-- PERSONAL INJURY -->
+     
             <div class="accordion-item">
-                <div class="accordion-header active" data-target="personal-injury">
+                <div class="accordion-header" data-target="personal-injury">
                     <span>Personal Injury</span>
                     <span class="accordion-icon">▼</span>
                 </div>
-                <!-- Submenu (Auto-expanded for demo) -->
-                <div class="accordion-content" style="max-height: 500px;">
+               
+               <div class="accordion-content">
                     <a href="#" class="accordion-link" data-content="personal-injury">Overview</a>
                     <a href="#" class="accordion-link" data-content="auto-accidents">Auto Accidents</a>
                     <a href="#" class="accordion-link" data-content="slip-fall">Slip & Fall</a>
@@ -38,9 +37,9 @@ include 'header.php'; ?>
                     <a href="#" class="accordion-link" data-content="trucking">Trucking & Big Rig Accidents</a>
                     <a href="#" class="accordion-link" data-content="motorcycle">Motorcycle Accidents</a>
                 </div>
-            </div>
+            </div> 
 
-            <!-- WORKERS COMP -->
+         
             <div class="accordion-item">
                 <div class="accordion-header" data-target="workers-comp">
                     <span>Workers Compensation</span>
@@ -53,9 +52,9 @@ include 'header.php'; ?>
                     <a href="#" class="accordion-link" data-content="wages">Loss of Wages</a>
                     <a href="#" class="accordion-link" data-content="voc-rehab">Vocational Rehabilitation</a>
                 </div>
-            </div>
+            </div> 
 
-            <!-- EMPLOYMENT LAW -->
+
             <div class="accordion-item">
                 <div class="accordion-header" data-target="employment">
                     <span>Employment Law</span>
@@ -69,31 +68,29 @@ include 'header.php'; ?>
                     <a href="#" class="accordion-link" data-content="employment-faq">Employment Law Frequently Asked Questions</a>
                     <a href="#" class="accordion-link" data-content="employment-overview">Employment Law: An Employee Overview</a>
                 </div>
-            </div>
+            </div> 
 
-             <!-- SOCIAL SECURITY -->
+    
              <div class="accordion-item">
                 <div class="accordion-header" data-target="ssdi">
                     <span>Social Security</span>
                     <span class="accordion-icon">▼</span>
                 </div>
                 <div class="accordion-content">
-                    <!-- <a href="#" class="accordion-link" data-content="ssdi">Disability Claims</a> -->
+
                 </div>
-            </div>
+            </div> 
 
         </div>
-    </aside>
+    </aside> 
 
     <!-- RIGHT CONTENT: DYNAMIC AREA -->
     <main id="dynamic-content">
-        <!-- Content will be loaded here via Fetch -->
-        <!-- Default Content Loading... -->
-        <div style="text-align:center; padding: 50px;">
+        <div class="loading-container">
             <p>Loading content...</p>
         </div>
-    </main>
+    </main> 
+
 
 </div>
-
 <?php include 'footer.php'; ?>

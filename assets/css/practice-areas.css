@@ -1,0 +1,168 @@
+/* HERO & LAYOUT RESET */
+/* SCOPED FIX: Apply box-sizing to layout containers to prevent overflow */
+.practice-container,
+.practice-container *,
+.page-hero,
+.page-hero * {
+    box-sizing: border-box;
+}
+
+.page-hero {
+    height: 40vh;
+    background: linear-gradient(rgba(17, 24, 39, 0.75), rgba(17, 24, 39, 0.8)), url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Parallax effect for premium feel */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 60px;
+}
+
+/* Layout Container */
+.practice-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    max-width: 1400px;
+    margin: -50px auto 50px;
+    /* Overlap hero */
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Left Sidebar (Glassmorphism Accordion) */
+.practice-sidebar {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.sidebar-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Accordion Styles */
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    background: white;
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    font-weight: 700;
+    color: var(--primary);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.accordion-header:hover,
+.accordion-header.active {
+    background: var(--primary);
+    color: var(--accent);
+    border-color: var(--primary);
+}
+
+.accordion-icon {
+    font-size: 0.8rem;
+    transition: transform 0.3s;
+}
+
+.accordion-header.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.accordion-link {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #64748b;
+    font-size: 0.95rem;
+    border-left: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.accordion-link:hover,
+.accordion-link.active {
+    color: var(--primary);
+    border-left-color: var(--accent);
+    background: rgba(197, 160, 89, 0.1);
+    font-weight: 600;
+}
+
+/* Right Content Area */
+#dynamic-content {
+    min-height: 500px;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.5s ease;
+}
+
+/* 
+ * Practice Areas Page CSS
+ * This file is intended to contain styles for page-practice-areas.php
+ */
+
+/* Migrated Inline Styles */
+.accordion-content.force-open {
+    max-height: 500px;
+}
+
+.loading-container {
+    text-align: center;
+    padding: 50px;
+}
+
+@media (max-width: 900px) {
+    .practice-container {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+    }
+
+    .practice-sidebar {
+        position: relative;
+        top: 0;
+        margin-bottom: 30px;
+    }
+
+    /* FIX: Reduce padding to prevent overflow on mobile */
+    #dynamic-content {
+        padding: 20px 15px;
+        min-height: auto;
+        /* Allow height to adjust */
+    }
+}
