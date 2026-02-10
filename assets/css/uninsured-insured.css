@@ -1,0 +1,159 @@
+/* =========================================
+   UNINSURED MOTORIST STYLES
+   Matches Auto Accidents / Brain Injury Theme
+   ========================================= */
+
+:root {
+    --clark-primary: #111111;
+    --clark-accent: #c5a059;
+    --clark-text: #334155;
+    --clark-bg-light: #f8fafc;
+    --clark-dark-bg: #111111;
+}
+
+.uninsured-container {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--clark-text);
+    padding-top: 0px;
+}
+
+/* --- HEADER / INTRO --- */
+.section-header {
+    margin-bottom: 50px;
+}
+
+.uninsured-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--clark-text);
+}
+
+/* --- WARNING BOX (Light Theme Feature) --- */
+.warning-box {
+    background-color: var(--clark-bg-light);
+    color: var(--clark-primary);
+    padding: 40px;
+    border-radius: 4px;
+    margin: 50px 0;
+    position: relative;
+    border-left: 5px solid var(--clark-accent);
+}
+
+.warning-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--clark-primary);
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.warning-box h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    color: var(--clark-primary);
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+}
+
+.warning-box p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--clark-text);
+    margin-bottom: 0;
+}
+
+/* --- FEATURED IMAGE (New) --- */
+.ui-featured-image,
+.ui-intro-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    /* Crops the square image to landscape */
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.warning-box strong {
+    color: var(--clark-accent);
+}
+
+/* --- GRID LAYOUT (Matches Auto Accidents Advice Grid) --- */
+.conflict-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 20px 0;
+}
+
+.solution-col,
+.risk-col {
+    background: var(--clark-bg-light);
+    padding: 35px;
+    border-top: 4px solid var(--clark-accent);
+    border-radius: 0 0 4px 4px;
+}
+
+.solution-col h4,
+.risk-col h4 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    color: var(--clark-primary);
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    /* Centered like Auto Accidents */
+    border-bottom: none;
+    /* Removed underline */
+}
+
+.solution-col p,
+.risk-col p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--clark-text);
+}
+
+/* --- HIGHLIGHT BOX (Updated for inside card) --- */
+.highlight-box {
+    background-color: #fff;
+    /* White against light gray */
+    border-left: 4px solid var(--clark-accent);
+    /* Side accent */
+    padding: 20px;
+    margin-top: 20px;
+    font-style: italic;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.highlight-box p {
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.highlight-box strong {
+    color: var(--clark-primary);
+}
+
+/* --- TEXT UTILS --- */
+.gold-text {
+    color: var(--clark-accent);
+    font-weight: 700;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .conflict-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .warning-box {
+        padding: 30px;
+    }
+}

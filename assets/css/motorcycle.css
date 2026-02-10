@@ -1,0 +1,123 @@
+/* =========================================
+   MOTORCYCLE ACCIDENTS - PERSONAL INJURY STYLE (Full Clark)
+   ========================================= */
+
+/* Use scoped variables to ensure consistency */
+:root {
+    --clark-primary: #111111;
+    --clark-accent: #c5a059;
+    --clark-text: #334155;
+    --clark-white: #ffffff;
+}
+
+/* --- PAGE CONTAINER --- */
+.clark-page-container {
+    padding-bottom: 80px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--clark-text);
+    background-color: #fff;
+}
+
+/* --- SECTIONS --- */
+.clark-section {
+    padding: 0px 20px;
+    /* Increased padding matches PI */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.clark-section.bg-light {
+    background-color: #f9f9f9;
+    border-top: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f1f5f9;
+    width: 100%;
+    max-width: 100%;
+    /* Full width background */
+}
+
+/* Wrapper inside bg-light to constrain width */
+.clark-section.bg-light .clark-text-block {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.clark-text-block {
+    margin-bottom: 30px;
+    text-align: left;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clark-text-block p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--clark-text);
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+
+
+/* INTRO IMAGE */
+.pi-featured-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 30px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+/* --- SPECIAL BOXES (Philosophy / Highlight) --- */
+/* --- SPECIAL BOXES (Philosophy / Highlight) --- */
+.clark-philosophy-box {
+    background-color: var(--clark-white);
+    padding: 60px;
+    text-align: center;
+    border: 2px solid var(--clark-accent);
+    margin: 40px 0;
+}
+
+.clark-philosophy-title {
+    color: var(--clark-accent);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    font-family: 'Times New Roman', serif;
+}
+
+.clark-highlight-gold {
+    color: var(--clark-accent);
+    font-weight: 700;
+}
+
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .content-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .clark-section {
+        padding: 20px 20px;
+    }
+
+    .clark-philosophy-box {
+        padding: 30px 20px;
+    }
+
+    .pull-quote {
+        margin: 40px 10px;
+        padding: 30px;
+        font-size: 1.2rem;
+    }
+
+    .cta-number {
+        font-size: 1.8rem;
+    }
+}

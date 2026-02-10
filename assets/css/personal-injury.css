@@ -1,4 +1,263 @@
-.practice-grid {
+/* 
+   Theme Name: Nehoray Law
+   File: Auto Personal Injury (Clark Style)
+   Usage: Personal Injury Overview Page
+   Colors: 
+     Primary (Dark Background): #111111
+     Accent (Gold): #c5a059
+     Text (Slate): #334155
+     White: #ffffff
+*/
+
+:root {
+    --clark-primary: #111111;
+    --clark-accent: #c5a059;
+    --clark-text: #334155;
+    --clark-white: #ffffff;
+}
+
+/* --- NEW UTILITIES (Replacing Inline Styles) --- */
+/* Increased specificity to override .call-cta span in style.css */
+.call-cta .clark-cta-label {
+    color: var(--clark-text, #334155);
+    font-weight: 400;
+    /* Removed bold */
+    margin-right: 5px;
+}
+
+.call-cta .clark-header-number {
+    text-decoration: none;
+    color: var(--clark-primary, #111);
+    font-weight: 700;
+    cursor: default;
+}
+
+.clark-highlight-gold {
+    color: var(--clark-accent);
+    font-weight: 700;
+}
+
+/* --- HERO SECTION --- */
+.clark-hero {
+    background-color: var(--clark-primary);
+    color: var(--clark-white);
+    padding: 100px 20px;
+    /* More vertical breathing room */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.clark-hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.clark-hero h1 {
+    font-family: 'Times New Roman', Times, serif;
+    /* Distinctive serif */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 3rem;
+    color: var(--clark-white);
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.clark-hero p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #cbd5e1;
+    /* Lighter slate for contrast on dark */
+    line-height: 1.8;
+}
+
+.clark-btn {
+    display: inline-block;
+    padding: 18px 40px;
+    background-color: transparent;
+    border: 1px solid var(--clark-accent);
+    color: var(--clark-accent);
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+.clark-btn:hover {
+    background-color: var(--clark-accent);
+    color: #111;
+    /* Dark text on gold button */
+}
+
+/* --- SECTIONS --- */
+.clark-section {
+    padding: 0 20px 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.clark-section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.clark-section-header h2 {
+    font-size: 2.2rem;
+    color: var(--clark-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.clark-separator {
+    width: 60px;
+    height: 1px;
+    background: var(--clark-accent);
+    margin: 0 auto;
+}
+
+/* --- EDUCATIONAL TEXT BLOCKS --- */
+.clark-text-block {
+    margin-bottom: 30px;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clark-text-block p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--clark-text);
+    margin-bottom: 20px;
+}
+
+/* --- PRACTICE LIST GRID --- */
+.clark-practice-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 15px;
+    /* Tighter gap for list feel */
+}
+
+.clark-list-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e2e8f0;
+    transition: background 0.2s;
+}
+
+.clark-list-item:hover {
+    background: #f8fafc;
+    border-bottom-color: var(--clark-accent);
+}
+
+.clark-list-icon {
+    color: var(--clark-accent);
+    font-size: 0.8rem;
+    margin-right: 15px;
+    /* Arrow shape */
+}
+
+.clark-list-text {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #1e293b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- PHILOSOPHY CTA SECTION --- */
+.clark-philosophy-box {
+    background-color: var(--clark-white);
+    padding: 60px;
+    text-align: center;
+    border: 2px solid var(--clark-accent);
+}
+
+.clark-philosophy-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.clark-philosophy-title {
+    color: var(--clark-accent);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+/* --- DEFINITIONS GRID (Concepts) --- */
+.clark-def-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.clark-def-item h3 {
+    color: var(--clark-accent);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.clark-def-item p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .clark-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .clark-def-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .clark-philosophy-box {
+        padding: 40px 20px;
+    }
+
+    .clark-practice-list {
+        grid-template-columns: 1fr;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .practice-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 15px;
@@ -56,10 +315,10 @@
     color: #475569;
     line-height: 1.8;
     margin-bottom: 20px;
-}
+} */
 
 /* Collapsible Legal Details */
-.legal-details summary {
+/* .legal-details summary {
     cursor: pointer;
     font-weight: 700;
     color: var(--accent);
@@ -68,7 +327,7 @@
     border-radius: 4px;
     margin-top: 20px;
     list-style: none;
-    /* Remove default arrow */
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -87,12 +346,12 @@
     padding: 20px;
     background: #fff;
     border: 1px solid #f8fafc;
-}
+} */
 
 /* =========================================
    LEGAL CONCEPT CARDS (New)
    ========================================= */
-.legal-concept-grid {
+/* .legal-concept-grid {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -105,7 +364,7 @@
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(197, 160, 89, 0.4);
     border-radius: 8px;
-    /* More standard premium look */
+  
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -134,7 +393,7 @@
     text-shadow: none;
 }
 
-/* Remove generic colors */
+
 .legal-card-header.red,
 .legal-card-header.green,
 .legal-card-header.blue {
@@ -145,7 +404,7 @@
     padding: 30px;
     font-size: 1rem;
     color: #334155;
-    /* Slate Gray */
+   
     line-height: 1.8;
     flex-grow: 1;
     font-weight: 400;
@@ -154,14 +413,14 @@
 .practice-area-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    /* Responsive automático */
+   
     gap: 2rem;
     padding: 4rem 2rem;
 }
 
 @media (max-width: 768px) {
 
-    /* Correct class name based on HTML inspection */
+   
     .practice-grid,
     .practice-area-grid {
         grid-template-columns: 1fr;
@@ -222,7 +481,7 @@
 
 .practice-card {
     background: #fff;
-    /* O negro si sigues con el tema oscuro */
+   
     padding: 1rem;
     border: 1px solid #e0e0e0;
     transition: all 0.3s ease;
@@ -242,52 +501,52 @@
     letter-spacing: 1px;
     z-index: 2;
     background: #fff;
-    /* Para tapar texto si es necesario */
+   
     transition: transform 0.3s ease;
 }
 
 .practice-description {
     opacity: 0;
-    /* Oculto por defecto */
+  
     transform: translateY(20px);
     transition: all 0.3s ease;
     font-size: 0.9rem;
     color: #666;
     margin-top: 1rem;
     position: absolute;
-    /* Para que aparezca sobre o bajo el título */
+   
     bottom: 2rem;
     padding: 0 1.5rem;
 }
 
-/* LA MAGIA: El Hover */
+
 .practice-card:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-color: #c5a059;
-    /* Tu color dorado */
+   
 }
 
 .practice-card:hover .icon-container {
     transform: translateY(-40px) scale(0.8);
-    /* El icono sube y se encoge */
+  
 }
 
 .practice-card:hover h3 {
     transform: translateY(-40px);
-    /* El título sube */
+
 }
 
 .practice-card:hover .practice-description {
     opacity: 1;
-    /* El texto aparece */
+   
     transform: translateY(-20px);
-    /* Sube a su posición */
-}
+
+} */
 
 /* =========================================
    EDITORIAL LIST (No-Hover)
    ========================================= */
-.editorial-list {
+/* .editorial-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
@@ -318,4 +577,167 @@
     .editorial-item {
         padding: 20px;
     }
+} */
+
+/* --- NEW REDESIGN STYLES (Readability & Layout) --- */
+
+/* UTILITIES */
+.bg-light {
+    background-color: #f9f9f9;
+    /* Subtle gray for alternating sections */
+    border-top: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* TEXT BLOCKS */
+.main-intro {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.main-intro p {
+    font-size: 1.15rem;
+    color: var(--clark-text);
+    margin-bottom: 25px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.main-intro .featured-text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 30px;
+}
+
+/* CONTENT ROWS (Used for Legal Concepts to break up text) */
+.clark-content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.clark-content-row {
+    margin-bottom: 40px;
+    border-left: 3px solid var(--clark-accent);
+    padding-left: 30px;
+    background: #fff;
+}
+
+.clark-content-row h3 {
+    color: var(--clark-accent);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-family: 'Times New Roman', serif;
+    letter-spacing: 1px;
+}
+
+.clark-content-row p {
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: #475569;
+    text-align: justify;
+}
+
+/* INSIGHTS LIST (Detailed Cards for the final list) */
+.clark-insights-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 25px;
+}
+
+.insight-item {
+    background: #fff;
+    padding: 25px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.insight-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    border-color: var(--clark-accent);
+}
+
+.insight-title {
+    display: block;
+    font-weight: 700;
+    color: var(--clark-primary);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--clark-accent);
+    padding-bottom: 8px;
+    width: fit-content;
+}
+
+.insight-desc {
+    display: block;
+    color: #475569;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+    .clark-insights-list {
+        grid-template-columns: 1fr;
+    }
+
+    .clark-content-row {
+        padding-left: 15px;
+        border-left-width: 2px;
+    }
+
+    .main-intro p,
+    .clark-content-row p {
+        text-align: left;
+        /* Better for mobile reading */
+    }
+}
+
+/* INTRO IMAGES (Auto Accidents Style) */
+.pi-featured-image {
+    width: 100%;
+    height: 400px;
+    /* Force specific height like Auto Accidents */
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 30px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+/* --- CLOSING CTA (Copied from Auto Accidents) --- */
+.aa-closing-section {
+    text-align: center;
+    max-width: 700px;
+    margin: 60px auto 20px;
+    padding: 40px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.nehoray-cta-box {
+    margin-top: 30px;
+}
+
+.cta-prompt {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--clark-text, #334155);
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .aa-closing-section {
+        padding: 20px;
+    }
+
 }

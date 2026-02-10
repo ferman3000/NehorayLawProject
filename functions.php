@@ -171,6 +171,12 @@ function nehoraynew_scripts() {
         wp_enqueue_style( 'nehoray-practice-areas', get_template_directory_uri() . '/assets/css/practice-areas.css', array('nehoraynew-style'), _S_VERSION );
         wp_enqueue_style( 'nehoray-personal-injury', get_template_directory_uri() . '/assets/css/personal-injury.css', array('nehoray-practice-areas'), _S_VERSION );
         wp_enqueue_style( 'nehoray-auto-accidents', get_template_directory_uri() . '/assets/css/auto-accidents.css', array('nehoray-practice-areas'), _S_VERSION );
+        wp_enqueue_style( 'nehoray-slip-fall', get_template_directory_uri() . '/assets/css/slip-fall.css', array('nehoray-practice-areas'), _S_VERSION );
+        wp_enqueue_style( 'nehoray-dog-bite', get_template_directory_uri() . '/assets/css/dog-bite.css', array('nehoray-practice-areas'), _S_VERSION );
+        wp_enqueue_style( 'nehoray-brain-injury', get_template_directory_uri() . '/assets/css/brain-injury.css', array('nehoray-practice-areas'), _S_VERSION );
+        wp_enqueue_style( 'nehoray-uninsured', get_template_directory_uri() . '/assets/css/uninsured-insured.css', array('nehoray-practice-areas'), _S_VERSION );
+        wp_enqueue_style( 'nehoray-trucking', get_template_directory_uri() . '/assets/css/trucking.css', array('nehoray-practice-areas'), _S_VERSION );
+        wp_enqueue_style( 'nehoray-motorcycle', get_template_directory_uri() . '/assets/css/motorcycle.css', array('nehoray-practice-areas'), _S_VERSION );
     }
 
 	// 2. NUEVO: Estilos para el Blog (Listado) Y Artículos individuales

@@ -1,0 +1,130 @@
+/* =========================================
+   TRUCKING ACCIDENTS STYLES (Redesign)
+   ========================================= */
+
+.trucking-container {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--text, #334155);
+    padding-bottom: 60px;
+}
+
+/* --- INTRO TEXT --- */
+.tr-intro-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: var(--text, #334155);
+}
+
+.tr-featured-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 30px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+/* --- SECTIONS --- */
+.tr-section-block {
+    margin: 20px 0;
+}
+
+.tr-subtitle {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    color: var(--primary, #111111);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 15px;
+}
+
+/* --- ARROW LIST (Safety Tips) --- */
+.tr-arrow-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tr-arrow-list li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.tr-arrow-list li::before {
+    content: "➤";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 1.2rem;
+    color: var(--accent, #c5a059);
+}
+
+.tr-arrow-list strong {
+    color: var(--primary, #111111);
+    font-weight: 700;
+}
+
+/* --- GUIDELINES GRID --- */
+.tr-advice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.tr-advice-col {
+    background: #f8fafc;
+    padding: 30px;
+    border-top: 4px solid var(--accent, #c5a059);
+}
+
+.tr-advice-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--primary, #111111);
+}
+
+/* Check List Style for Guidelines */
+.tr-check-list {
+    list-style: none;
+    padding: 0;
+}
+
+.tr-check-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.tr-check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent, #c5a059);
+    font-weight: bold;
+}
+
+.tr-check-list strong {
+    color: var(--primary, #111111);
+    font-weight: 700;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tr-advice-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,100 @@
+/* 
+   Theme Name: Nehoray Law
+   File: Slip & Fall Styles
+   Usage: Slip & Fall Page specific styles
+*/
+
+:root {
+    --clark-primary: #111111;
+    --clark-accent: #c5a059;
+    --clark-text: #334155;
+    --clark-white: #ffffff;
+}
+
+.stats-section {
+    max-width: 1280px;
+    /* Increased from 1100px */
+    margin: 40px auto;
+    padding: 0 20px 60px 20px;
+}
+
+/* --- HEADER CTA --- */
+.sf-header-phone {
+    text-decoration: none;
+    color: var(--clark-primary, #111);
+    font-weight: 800;
+}
+
+/* --- FEATURED IMAGE --- */
+.sf-featured-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    /* Space before the grid */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.clean-grid-left {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    background: #ffffff;
+
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: left;
+
+}
+
+/* --- GRID LAYOUT --- */
+/* Grid layout defined above */
+
+.clean-col-left {
+    background: #fff;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    /* Soften edges slightly */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clean-col-left:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-color: var(--clark-accent);
+}
+
+/* --- DECORATIVE ELEMENTS --- */
+.gold-line-left {
+    width: 60px;
+    height: 3px;
+    background-color: var(--clark-accent);
+    margin-bottom: 25px;
+}
+
+.clean-col-left h3 {
+    color: var(--clark-primary);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-family: 'Times New Roman', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.clean-col-left p {
+    color: var(--clark-text);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .clean-grid-left {
+        grid-template-columns: 1fr;
+    }
+}

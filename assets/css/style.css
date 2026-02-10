@@ -1,30 +1,6 @@
 /* =========================================
-   ESTILOS UNIVERSALES (Extracted from page-demo-speed.php)
+   UNI
    ========================================= */
-
-
-
-/* NAVIGATION */
-
-
-
-/* FOOTER */
-
-
-/* ----------
-----Practice Areas Page CSS----
------------ */
-/* =========================================
-   NEW STYLES FOR PRACTICE AREAS VIEW
-   ========================================= */
-
-
-/* ----------
-----End Practice Areas Page CSS----
------------ */
-/* ----------
-----Personal Injury CSS----
------------ */
 
 /* Dynamic Content Typography */
 .content-header {
@@ -519,21 +495,7 @@
    STATS SECTION (Slip-Fall)
    ========================================= */
 
-.clean-grid-left {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* 3 columnas exactas */
-    gap: 50px;
-    /* Espacio entre columnas */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 20px;
-    background: #ffffff;
-    /* FONDO BLANCO */
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    text-align: left;
-    /* CAMBIO IMPORTANTE: Alinea el texto a la izquierda */
-}
+
 
 /* CADA COLUMNA */
 .clean-col-left {
@@ -727,177 +689,12 @@
     }
 }
 
-/* =========================================
-   STATS SECTION (Brain injury)
-   ========================================= */
 
-/* ESTRUCTURA GENERAL */
-.brain-injury-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 60px 20px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #333;
-    background: #fff;
-}
-
-/* TÍTULOS */
-.med-title {
-    font-size: 2rem;
-    color: #000;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-left: 5px solid #c5a059;
-    /* Acento dorado */
-    padding-left: 20px;
-}
-
-.med-intro {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #444;
-    margin-bottom: 50px;
-    max-width: 900px;
-}
-
-/* GRID CENTRAL (Anatomía vs Stats) */
-.med-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    /* La anatomía ocupa un poco más */
-    gap: 30px;
-    margin-bottom: 50px;
-}
-
-/* TARJETA DE ANATOMÍA (OSCURA) */
-.anatomy-card {
-    background: #111;
-    /* Negro técnico */
-    color: #ccc;
-    padding: 30px;
-    border-radius: 4px;
-}
-
-.card-header {
-    color: #c5a059;
-    font-weight: bold;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-    border-bottom: 1px solid #333;
-    padding-bottom: 10px;
-}
-
-.anatomy-card p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.hemisphere-split {
-    display: flex;
-    gap: 20px;
-}
-
-.hemi-box {
-    background: #222;
-    padding: 15px;
-    flex: 1;
-    font-size: 0.85rem;
-}
-
-.hemi-box strong {
-    display: block;
-    color: #fff;
-    margin-bottom: 5px;
-}
-
-/* TARJETA DE ESTADÍSTICAS (CLARA) */
-.stats-card-light {
-    background: #f9f9f9;
-    padding: 30px;
-    border: 1px solid #eee;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.stat-big {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #000;
-    line-height: 1;
-    margin-bottom: 10px;
-}
-
-.stat-big.gold {
-    color: #c5a059;
-}
-
-.stat-label {
-    font-size: 0.9rem;
-    color: #666;
-    line-height: 1.4;
-}
-
-.stat-divider {
-    height: 1px;
-    background: #ddd;
-    margin: 25px 0;
-}
-
-/* SECCIÓN FINAL (COLUMNAS DE TEXTO) */
-.impact-section h3 {
-    text-align: left;
-    font-size: 1.2rem;
-    color: #000;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-.impact-text-cols {
-    column-count: 2;
-    /* Divide el texto final en 2 columnas estilo revista */
-    column-gap: 40px;
-    text-align: justify;
-}
-
-.impact-text-cols p {
-    margin-top: 0;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #333;
-}
-
-/* RESPONSIVE */
-@media (max-width: 800px) {
-    .med-grid {
-        grid-template-columns: 1fr;
-        /* Una columna */
-    }
-
-    .impact-text-cols {
-        column-count: 1;
-        /* Una columna de texto */
-    }
-
-    .hemisphere-split {
-        flex-direction: column;
-    }
-}
 
 /* =========================================
    STATS SECTION (Slip-Fall)
    ========================================= */
-.uninsured-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 60px 20px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #333;
-    background: #fff;
-}
+
 
 /* ENCABEZADO */
 .section-header {
@@ -1031,14 +828,6 @@
    STATS SECTION (Trucking)
    ========================================= */
 
-.trucking-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 60px 20px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #333;
-    background: #fff;
-}
 
 /* TÍTULO */
 .truck-header h2 {
@@ -3406,5 +3195,67 @@
         display: block;
         width: 100%;
         margin-bottom: 5px;
+    }
+}
+
+
+/* =========================================
+   NEHORAY MESSAGE STYLES (Used in all views)
+   ========================================= */
+.nehoray-note {
+    font-style: italic;
+    text-align: center;
+    margin-top: 40px;
+    color: var(--clark-text, #334155);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1rem;
+}
+
+.pull-quote {
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: 'Times New Roman', serif;
+    padding: 50px;
+    background: #f9f9f9;
+    background-color: #f9f9f9;
+    /* Ensure bg color applies */
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid var(--clark-accent, #c5a059);
+    margin: 60px 30px 20px;
+    color: var(--clark-primary, #111);
+}
+
+.gold-text {
+    color: var(--clark-accent, #c5a059);
+    font-weight: 700;
+    display: block;
+    margin-top: 10px;
+    font-family: sans-serif;
+}
+
+.cta-number {
+    display: block;
+    font-size: 2.2rem;
+    font-family: serif;
+    color: var(--clark-accent, #c5a059);
+    font-weight: 700;
+    text-decoration: none;
+    cursor: default;
+    /* Non-clickable */
+}
+
+@media (max-width: 768px) {
+
+    .cta-number {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .pull-quote {
+        padding: 30px 20px;
+        font-size: 1.2rem;
     }
 }

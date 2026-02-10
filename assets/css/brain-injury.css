@@ -1,0 +1,194 @@
+/* =========================================
+   BRAIN INJURY REDESIGN (Auto Accidents/Dog Bite Style Match)
+   ========================================= */
+
+.brain-injury-redesign-container {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--text, #334155);
+    padding-bottom: 60px;
+}
+
+/* --- COLORS --- */
+:root {
+    --clark-primary: #111111;
+    --clark-accent: #c5a059;
+    --clark-text: #334155;
+    --clark-bg-light: #f8fafc;
+    --clark-dark-bg: #111111;
+}
+
+/* --- INTRO --- */
+.bi-intro-text {
+    margin-bottom: 50px;
+}
+
+.bi-intro-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: var(--clark-text);
+}
+
+.highlight-gold {
+    color: var(--clark-accent);
+    font-weight: 700;
+}
+
+/* --- FEATURED IMAGE --- */
+.bi-featured-image-container {
+    width: 100%;
+}
+
+.bi-featured-image {
+    width: 100%;
+    height: auto;
+    /* object-fit: cover; */
+    border-radius: 4px;
+    /* More professional, less rounded */
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* --- SECTIONS --- */
+.bi-section-block {
+    margin: 60px 0;
+}
+
+.bi-subtitle {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    color: var(--clark-primary);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 15px;
+}
+
+/* --- ANATOMY BOX (Light Feature) --- */
+.bi-anatomy-box {
+    background-color: var(--clark-bg-light);
+    color: var(--clark-primary);
+    /* Dark text on light */
+    padding: 40px;
+    border-radius: 4px;
+    border-left: 5px solid var(--clark-accent);
+    margin: 60px 0;
+}
+
+.bi-anatomy-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    color: var(--clark-primary);
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bi-anatomy-intro {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    max-width: 800px;
+    color: var(--clark-text);
+}
+
+.bi-hemisphere-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.bi-hemi-card {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.bi-hemi-label {
+    display: block;
+    color: var(--clark-primary);
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--clark-accent);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.bi-hemi-card p {
+    margin: 10px 0 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--clark-text);
+}
+
+/* --- ARROW LIST (Matches db-arrow-list) --- */
+.bi-arrow-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bi-arrow-list li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.bi-arrow-list li::before {
+    content: "➤";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 1.2rem;
+    color: var(--clark-accent);
+}
+
+.bi-arrow-list strong {
+    color: var(--clark-primary);
+    font-weight: 700;
+}
+
+
+/* --- IMPACT BOX (Matches db-impact-box) --- */
+.bi-impact-box {
+    background-color: var(--clark-bg-light);
+    border-left: 5px solid var(--clark-accent);
+    padding: 40px;
+    margin: 60px 0;
+}
+
+.bi-impact-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    color: var(--clark-primary);
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.bi-impact-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.bi-impact-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .bi-hemisphere-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
