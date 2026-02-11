@@ -177,6 +177,11 @@ function nehoraynew_scripts() {
         wp_enqueue_style( 'nehoray-uninsured', get_template_directory_uri() . '/assets/css/uninsured-insured.css', array('nehoray-practice-areas'), _S_VERSION );
         wp_enqueue_style( 'nehoray-trucking', get_template_directory_uri() . '/assets/css/trucking.css', array('nehoray-practice-areas'), _S_VERSION );
         wp_enqueue_style( 'nehoray-motorcycle', get_template_directory_uri() . '/assets/css/motorcycle.css', array('nehoray-practice-areas'), _S_VERSION );
+        wp_enqueue_style( 'nehoray-workers-comp', get_template_directory_uri() . '/assets/css/workers-compensation.css', array('nehoray-practice-areas'), _S_VERSION );
+        wp_enqueue_style( 'nehoray-benefits-overview', get_template_directory_uri() . '/assets/css/benefits-overview.css', array('nehoray-practice-areas'), _S_VERSION );
+        wp_enqueue_style( 'nehoray-survivor', get_template_directory_uri() . '/assets/css/survivor.css', array('nehoray-practice-areas'), _S_VERSION );
+        wp_enqueue_style( 'nehoray-wages', get_template_directory_uri() . '/assets/css/wages.css', array('nehoray-practice-areas'), _S_VERSION );
+        wp_enqueue_style( 'nehoray-voc-rehab', get_template_directory_uri() . '/assets/css/voc-rehab.css', array('nehoray-practice-areas'), _S_VERSION );
     }
 
 	// 2. NUEVO: Estilos para el Blog (Listado) Y Artículos individuales

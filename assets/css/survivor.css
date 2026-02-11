@@ -1,0 +1,169 @@
+/* =========================================
+   SURVIVOR BENEFITS STYLES
+   (Auto-Accident Aesthetic: Clean, Gold/Black/White)
+   ========================================= */
+
+.survival-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #334155;
+    line-height: 1.6;
+}
+
+/* --- INTRO TEXT --- */
+.surv-intro-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    margin-bottom: 25px;
+    color: #334155;
+}
+
+.surv-featured-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 30px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+/* --- SECTIONS --- */
+
+.surv-subtitle {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    color: #111111;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 15px;
+    margin-top: 60px;
+}
+
+/* --- BENEFITS LIST (Gold Arrow Style) --- */
+.surv-benefit-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.surv-benefit-list li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #334155;
+}
+
+/* Custom Gold Arrow */
+.surv-benefit-list li::before {
+    content: "➤";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 1.2rem;
+    color: #c5a059;
+}
+
+/* --- CHECK LIST (Checkmark Style for Non-Death) --- */
+.surv-check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.surv-check-list li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #334155;
+}
+
+/* Custom Gold Checkmark */
+.surv-check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #c5a059;
+}
+
+/* --- RIGHTS SECTION (Highlighted Box) --- */
+.surv-highlight-box {
+    background: #f8fafc;
+    border-left: 4px solid #c5a059;
+    padding: 30px;
+    margin: 40px 0;
+}
+
+.surv-highlight-box h4 {
+    color: #111;
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.surv-highlight-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.surv-highlight-box li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}
+
+.surv-highlight-box li::before {
+    content: "•";
+    color: #c5a059;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+/* --- CONSORTIUM NOTE --- */
+.surv-note {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+    font-style: italic;
+    color: #64748b;
+}
+
+/* --- CLOSING CTA --- */
+.pull-quote {
+    text-align: center;
+    max-width: 700px;
+    margin: 60px auto 20px;
+    padding: 40px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid #c5a059;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    font-size: 1.2rem;
+    font-family: "Playfair Display", serif;
+}
+
+.cta-number {
+    display: block;
+    font-size: 2.2rem;
+    color: #c5a059;
+    font-weight: 700;
+    margin-top: 10px;
+}
