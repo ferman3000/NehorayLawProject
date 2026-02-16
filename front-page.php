@@ -11,7 +11,7 @@ get_header();
     <section class="hero">
         <div class="hero-content">
             <h1>Relentless Justice. <br>Proven Results.</h1>
-            <p>We fight for your rights when it matters most. Expert legal representation in Los Angeles.</p>
+            <p>We fight for your rights when it matters most. Expert legal representation throughout California.</p>
             <a href="<?php echo home_url('/contact'); ?>" class="btn">Get a Free Consultation</a>
         </div>
     </section>
@@ -135,9 +135,9 @@ get_header();
 
             <article class="office-card office-riv">
                 <div class="office-content">
-                    <h3 class="office-city">Riverside</h3>
+                    <h3 class="office-city">OAKLAND</h3>
                     <div class="office-details">
-                        <p>3763 Arlington Ave<br>Riverside, CA 92506</p>
+                        <p>2100 Embarcadero<br>Oakland, CA 94606</p>
                         <p><strong>Phone:</strong> (888) 595-4LAW</p>
                     </div>
                 </div>

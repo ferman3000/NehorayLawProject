@@ -1,0 +1,144 @@
+/* =========================================
+   EMPLOYMENT OVERVIEW STYLES (Structured Editorial)
+   ========================================= */
+
+.employment-overview-container {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #334155;
+}
+
+/* --- FEATURED IMAGE --- */
+.eo-featured-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 30px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+/* --- INTRO --- */
+.eo-intro-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #334155;
+}
+
+/* --- SECTIONS --- */
+.eo-section-block {
+    margin: 60px 0;
+}
+
+.eo-subtitle {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    color: #111111;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 15px;
+}
+
+.eo-section-block p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #334155;
+    margin-bottom: 20px;
+}
+
+/* --- HIGHLIGHT BOX (For Contractors) --- */
+.eo-highlight-box {
+    background: #f8fafc;
+    /* Light gray background like AA stats */
+    padding: 40px;
+    border-top: 4px solid #c5a059;
+    /* Gold top border */
+    margin: 40px 0;
+    border-radius: 4px;
+}
+
+.eo-highlight-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    color: #111;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* --- LISTS (Arrow & Check) --- */
+.eo-arrow-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.eo-arrow-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #334155;
+}
+
+.eo-arrow-list li::before {
+    content: "➤";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: #c5a059;
+    /* Gold arrow */
+    font-size: 1rem;
+}
+
+.eo-check-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2 Column list */
+    gap: 15px;
+}
+
+.eo-check-list li {
+    position: relative;
+    padding-left: 30px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.eo-check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #c5a059;
+    /* Gold check */
+    font-weight: bold;
+}
+
+
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .eo-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .eo-check-list {
+        grid-template-columns: 1fr;
+    }
+
+    .eo-cta-box {
+        padding: 30px 20px;
+    }
+
+    .eo-cta-number {
+        font-size: 2rem;
+    }
+}

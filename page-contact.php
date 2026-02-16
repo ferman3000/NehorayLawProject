@@ -51,9 +51,9 @@ get_header(); ?>
             <div class="office-mini-item">
                 <div class="office-mini-title">
                     <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                    Riverside Office
+                    Oakland Office
                 </div>
-                <div class="office-mini-address">3763 Arlington Ave<br>Riverside, CA 92506</div>
+                <div class="office-mini-address">2100 Embarcadero<br>Oakland, CA 94606</div>
             </div>
 
             <div class="channel-grid">

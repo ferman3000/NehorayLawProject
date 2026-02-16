@@ -1,0 +1,90 @@
+/* =========================================
+   HARASSMENT PAGE STYLES
+   (Strict Auto-Accident Layout Match - Clone of Discrimination)
+   ========================================= */
+
+/* Compact Arrow List for Protected Classes / Examples */
+.compact-arrow-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px 30px;
+}
+
+@media (min-width: 600px) {
+    .compact-arrow-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.compact-arrow-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    color: #334155;
+    display: flex;
+    align-items: flex-start;
+}
+
+.compact-arrow-list li::before {
+    content: "➤";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 1rem;
+    color: #c5a059;
+}
+
+/* Remedies List Grid (Included for completeness/consistency) */
+.remedies-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px 30px;
+}
+
+@media (min-width: 600px) {
+    .remedies-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.remedies-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 0;
+    font-size: 1.05rem;
+    color: #334155;
+}
+
+.remedies-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #c5a059;
+    font-weight: bold;
+}
+
+/* Closing Note (Centered, Italic) */
+.closing-note-centered {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #334155;
+    max-width: 900px;
+    margin: 50px auto 30px;
+    padding: 0 20px;
+}
+
+.winning-gold {
+    color: #c5a059;
+    font-weight: 800;
+    text-transform: uppercase;
+}

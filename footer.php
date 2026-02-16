@@ -11,8 +11,13 @@
 
 ?>
 
-    <footer class="site-footer">
-        <div class="footer-logo">NEHORAY <span style="color: var(--accent);">LAW</span></div>
+    <footer class="site-footer text-center">
+        <div class="logo">
+            <a href="<?php echo home_url('/'); ?>" class="brand-logo">
+                <span class="brand-sub text-center" style="color: #ffffff !important;">Law Offices of</span>
+                <span class="brand-main text-center">Bob Nehoray</span>
+            </a>
+        </div>
         <div class="footer-links">
             <a href="<?php echo home_url('/'); ?>">Home</a>
             <!-- <a href="#">About Us</a> -->

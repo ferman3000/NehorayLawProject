@@ -14,7 +14,7 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nehoray Law | High Performance Demo</title>
+    <title>Law Offices Of Bob Nehoray</title>
     <?php wp_head(); ?>
     <style>
         /* RESET & BASE */
@@ -80,96 +80,6 @@
             --text: #334155;
             --white: #ffffff;
         }
-
-        /* NAVIGATION */
-        /* nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 5%;
-            background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: -1px; }
-        .logo span { color: var(--accent); }
-        .nav-links { display: flex; gap: 30px; }
-        .nav-links a { text-decoration: none; color: var(--primary); font-weight: 500; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--accent); }
-        .mobile-menu { display: none; font-size: 1.5rem; cursor: pointer; } */
-
-        /* HERO SECTION */
-        /* .hero {
-            height: 85vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80') no-repeat center center/cover;, url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80'); 
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--white);
-            padding: 0 20px;
-            margin-top: 60px; 
-        }
-        .hero-content { max-width: 800px; animation: fadeIn 1.5s ease; }
-        .hero h1 { font-size: 4rem; margin-bottom: 1rem; line-height: 1.1; font-weight: 700; letter-spacing: -2px; }
-        .hero p { font-size: 1.25rem; margin-bottom: 2rem; color: #cbd5e1; font-weight: 300; }
-        
-        .btn {
-            display: inline-block;
-            padding: 15px 40px;
-            background: var(--accent);
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-            border: 2px solid var(--accent);
-        }
-        .btn:hover { background: transparent; color: var(--accent); } */
-
-        /* FEATURES / SERVICES */
-    
-
-        /* Imágenes de fondo para cada oficina */
-        
-
-
-        /* FOOTER */
-        /* .site-footer {
-            background: var(--primary);
-            color: #94a3b8;
-            padding: 60px 5% 30px;
-            font-size: 0.9rem;
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .footer-logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: white;
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-        
-        .footer-links {
-            margin-bottom: 30px;
-        }
-        
-        .footer-links a {
-            color: #cbd5e1;
-            text-decoration: none;
-            margin: 0 15px;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover { color: var(--accent); } */
 
         /* Responsive Contact */
         @media (max-width: 900px) {

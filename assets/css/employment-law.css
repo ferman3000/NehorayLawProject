@@ -1,0 +1,139 @@
+/* =========================================
+   EMPLOYMENT LAW PAGE STYLES
+   (Auto-Accident Aesthetic: Clean, Gold/Black/White)
+   ========================================= */
+
+.employment-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #334155;
+    line-height: 1.6;
+}
+
+.employment-featured-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.employment-comparative-image {
+    width: 100%;
+    /* height: auto or fixed depending on preference, auto maintains aspect ratio */
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+/* --- INTRO SECTION --- */
+.employment-intro {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #334155;
+    margin-bottom: 50px;
+    border-left: 4px solid #c5a059;
+    padding-left: 20px;
+}
+
+/* --- DUAL COLUMN LAYOUT --- */
+.employment-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+@media (min-width: 800px) {
+    .employment-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+    }
+}
+
+/* --- SECTION STYLES --- */
+.client-section h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    color: #111;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #C5A059;
+    padding-bottom: 10px;
+}
+
+.client-section p {
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    color: #475569;
+}
+
+.client-subhead {
+    font-family: "Playfair Display", serif;
+    color: #c5a059;
+    font-size: 1.25rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* --- PRACTICE AREAS LIST (Gold Arrow) --- */
+.area-list {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.area-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    color: #334155;
+    font-weight: 500;
+}
+
+.area-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #c5a059;
+    font-weight: bold;
+}
+
+/* --- EMPLOYERS HIGHLIGHT BOX --- */
+.employer-highlight {
+    background: #F8F5EE;
+    /* New background */
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid #C5A059;
+    /* Gold top border */
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 4px;
+}
+
+.employer-highlight h4 {
+    font-family: "Playfair Display", serif;
+    color: #1e293b;
+    font-size: 1.1rem;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.employer-highlight p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    color: #475569;
+    line-height: 1.6;
+}

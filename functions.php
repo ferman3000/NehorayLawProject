@@ -166,8 +166,8 @@ function nehoraynew_scripts() {
         wp_enqueue_style( 'nehoray-privacy', get_template_directory_uri() . '/assets/css/privacy.css', array('nehoraynew-style'), _S_VERSION );
     }
 
-    // Conditional Load for Practice Areas
-    if ( is_page_template( 'page-practice-areas.php' ) || is_page('practice-areas') ) {
+	// Conditional Load for Practice Areas
+    if ( is_page_template( 'page-practice-areas.php' ) || is_page('practice-areas') || is_page('discrimination') || is_page('wrongful-termination') || is_page('employment-law') || is_page('harassment') || is_page('employment-overview') || is_page('employment-law-faq') || is_page('employment-faq') ) {
         wp_enqueue_style( 'nehoray-practice-areas', get_template_directory_uri() . '/assets/css/practice-areas.css', array('nehoraynew-style'), _S_VERSION );
         wp_enqueue_style( 'nehoray-personal-injury', get_template_directory_uri() . '/assets/css/personal-injury.css', array('nehoray-practice-areas'), _S_VERSION );
         wp_enqueue_style( 'nehoray-auto-accidents', get_template_directory_uri() . '/assets/css/auto-accidents.css', array('nehoray-practice-areas'), _S_VERSION );
@@ -182,6 +182,12 @@ function nehoraynew_scripts() {
         wp_enqueue_style( 'nehoray-survivor', get_template_directory_uri() . '/assets/css/survivor.css', array('nehoray-practice-areas'), _S_VERSION );
         wp_enqueue_style( 'nehoray-wages', get_template_directory_uri() . '/assets/css/wages.css', array('nehoray-practice-areas'), _S_VERSION );
         wp_enqueue_style( 'nehoray-voc-rehab', get_template_directory_uri() . '/assets/css/voc-rehab.css', array('nehoray-practice-areas'), _S_VERSION );
+        wp_enqueue_style( 'nehoray-employment-law', get_template_directory_uri() . '/assets/css/employment-law.css', array('nehoray-practice-areas'), _S_VERSION );
+        wp_enqueue_style( 'nehoray-wrongful-termination', get_template_directory_uri() . '/assets/css/wrongful-termination.css', array('nehoray-practice-areas'), _S_VERSION );
+        wp_enqueue_style( 'nehoray-discrimination', get_template_directory_uri() . '/assets/css/discrimination.css', array('nehoray-practice-areas'), _S_VERSION );
+        wp_enqueue_style( 'nehoray-harassment', get_template_directory_uri() . '/assets/css/harassment.css', array('nehoray-practice-areas'), _S_VERSION );
+        wp_enqueue_style( 'nehoray-employment-overview', get_template_directory_uri() . '/assets/css/employment-overview.css', array('nehoray-practice-areas'), _S_VERSION );
+        wp_enqueue_style( 'nehoray-employment-faq', get_template_directory_uri() . '/assets/css/employment-faq.css', array('nehoray-practice-areas'), _S_VERSION );
     }
 
 	// 2. NUEVO: Estilos para el Blog (Listado) Y Artículos individuales
