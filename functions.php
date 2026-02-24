@@ -210,6 +210,22 @@ function nehoraynew_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+    // --- CHATBOT WIDGET INTEGRATION ---
+    // Enqueue CSS
+    wp_enqueue_style( 'nehoray-chat-css', get_template_directory_uri() . '/assets/css/chat-widget.css', array(), '1.0' );
+    
+    // Enqueue JS Configuration (No dependencies)
+    wp_enqueue_script( 'nehoray-chat-config', get_template_directory_uri() . '/assets/js/chat-config.js', array(), '1.0', true );
+    
+    // Enqueue JS Engine (Depends on Config)
+    wp_enqueue_script( 'nehoray-chat-engine', get_template_directory_uri() . '/assets/js/chat-engine.js', array('nehoray-chat-config'), '1.0', true );
+    
+    // Localize Script to pass PHP variables to JS (like the Logo URL)
+    wp_localize_script( 'nehoray-chat-engine', 'nehorayChatParams', array(
+        'logoUrl' => get_template_directory_uri() . '/assets/img/logo-chat.png',
+        'ajaxUrl' => admin_url( 'admin-ajax.php' )
+    ));
 }
 add_action( 'wp_enqueue_scripts', 'nehoraynew_scripts' );
 
@@ -360,23 +376,40 @@ function nehoray_save_author_data( $post_id ) {
 add_action( 'save_post', 'nehoray_save_author_data' );
 
 /**
- * Antispam validation for contact form
+ * SISTEMA DE SEGURIDAD UNIFICADO: Honeypot + Bloqueo Ruso
  */
 add_filter( 'wpcf7_spam', function( $spam ) {
-    // Si ya está marcado como spam, no hacemos nada
+    // Si ya está marcado como spam, abortamos.
     if ( $spam ) {
         return $spam;
     }
 
-    // Obtenemos los datos del envío
     $submission = WPCF7_Submission::get_instance();
-    if ( $submission ) {
-        $posted_data = $submission->get_posted_data();
+    if ( ! $submission ) {
+        return $spam;
+    }
 
-        // Verificamos si la trampa tiene algo escrito
-        if ( ! empty( $posted_data['honeypot-trap'] ) ) {
-            // ¡AJÁ! Es un bot. Marcamos como spam.
-            return true;
+    $posted_data = $submission->get_posted_data();
+
+    // 1. CAPA HONEYPOT (Bots genéricos)
+    if ( ! empty( $posted_data['honeypot-trap'] ) ) {
+        return true; 
+    }
+
+    // 2. CAPA CIRÍLICA Y DOMINIOS .RU
+    foreach ( $posted_data as $key => $value ) {
+        if ( is_array( $value ) ) continue;
+
+        // Si hay alfabeto ruso, es bot.
+        if ( preg_match( '/[А-Яа-яЁё]/u', $value ) ) {
+            return true; 
+        }
+
+        // Si el campo es un email y termina en .ru, es bot.
+        if ( strpos( strtolower( $key ), 'email' ) !== false ) {
+            if ( preg_match( '/\.ru$/i', trim( $value ) ) ) {
+                return true; 
+            }
         }
     }
 
@@ -413,3 +446,76 @@ add_filter( 'wpcf7_posted_data', function( $posted_data ) {
 
     return $posted_data;
 } );
+
+/**
+ * --- CONFIGURACIÓN CHATBOT ---
+ * Define aquí el correo donde quieres recibir los notificaciones de nuevos leads.
+ * Si lo dejas como está, te llegará al correo pero es mejor cambiarlo al tuyo real.
+ */
+if ( ! defined( 'CHAT_LEADS_EMAIL' ) ) {
+    define( 'CHAT_LEADS_EMAIL', 'intake@nehoraylaw.com');
+}
+// -----------------------------
+
+/**
+ * HANDLER PARA EL BOT DE CHAT (Reemplazo de N8N)
+ * Recibe los datos del chat vía AJAX y envía un correo al admin.
+ */
+function nehoray_handle_chat_submit() {
+    // 1. Obtener la carga útil (JSON stringified desde JS)
+    // Usamos stripslashes porque WP a veces escapa las comillas en $_POST
+    $json_payload = isset($_POST['chat_payload']) ? stripslashes($_POST['chat_payload']) : '';
+    $chat_data = json_decode($json_payload, true);
+
+    if ( ! $chat_data ) {
+        wp_send_json_error( array( 'message' => 'No data received' ) );
+    }
+
+    // 2. Construir el Correo
+    // Usamos la constante definida arriba, o el email de admin por defecto si fallara algo
+    $admin_email = defined('CHAT_LEADS_EMAIL') ? CHAT_LEADS_EMAIL : get_option( 'admin_email' );
+    $client_name = isset($chat_data['name']) ? $chat_data['name'] : 'Lead';
+    
+    $subject = '🔔 New Lead from Chatbot: ' . $client_name;
+    
+    // Cabeceras para HTML
+    $headers = array('Content-Type: text/html; charset=UTF-8');
+    
+    // Cuerpo del mensaje
+    $body = '<div style="font-family: Arial, sans-serif; color: #333;">';
+    $body .= '<h2 style="color: #C5A059;">New Chat Submission</h2>';
+    $body .= '<p><strong>Date:</strong> ' . date('Y-m-d H:i:s') . '</p>';
+    $body .= '<hr style="border: 1px solid #eee;">';
+    $body .= '<table style="width: 100%; border-collapse: collapse;">';
+    
+    foreach ( $chat_data as $key => $val ) {
+        // Ignorar campos internos
+        if ($key === 'timestamp' || $key === 'source') continue;
+
+        $label = ucfirst( str_replace( '_', ' ', $key ) );
+        $value = esc_html( $val );
+        
+        $body .= '<tr>';
+        $body .= '<td style="padding: 8px; border-bottom: 1px solid #eee; font-weight: bold; width: 30%;">' . $label . '</td>';
+        $body .= '<td style="padding: 8px; border-bottom: 1px solid #eee;">' . $value . '</td>';
+        $body .= '</tr>';
+    }
+    
+    $body .= '</table>';
+    
+    // Agregar Metadata al final
+    $body .= '<br><p style="font-size: 12px; color: #999;">Source: ' . esc_html(isset($chat_data['source']) ? $chat_data['source'] : 'Unknown') . '</p>';
+    $body .= '</div>';
+
+    // 3. Enviar
+    $sent = wp_mail( $admin_email, $subject, $body, $headers );
+
+    if ( $sent ) {
+        wp_send_json_success( array( 'message' => 'Email sent successfully to ' . $admin_email ) );
+    } else {
+        wp_send_json_error( array( 'message' => 'Failed to send email. Check WP mail config.' ) );
+    }
+}
+// Registramos el hook para usuarios logueados y visitantes
+add_action( 'wp_ajax_nehoray_chat_submit', 'nehoray_handle_chat_submit' );
+add_action( 'wp_ajax_nopriv_nehoray_chat_submit', 'nehoray_handle_chat_submit' );
