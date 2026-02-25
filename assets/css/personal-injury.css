@@ -139,12 +139,11 @@
     margin-bottom: 20px;
 }
 
-/* --- PRACTICE LIST GRID --- */
-.clark-practice-list {
+/* --- PRACTICE LIST COLUMNS --- */
+.clark-practice-list-columns {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 15px;
-    /* Tighter gap for list feel */
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
 }
 
 .clark-list-item {
@@ -164,8 +163,15 @@
     color: var(--clark-accent);
     font-size: 0.8rem;
     margin-right: 15px;
+    transition: transform 0.3s ease;
+    display: inline-block;
     /* Arrow shape */
 }
+
+.clark-accordion-wrapper[open] .clark-list-icon {
+    transform: rotate(90deg);
+}
+
 
 .clark-list-text {
     font-size: 1.05rem;
@@ -173,6 +179,67 @@
     color: #1e293b;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+}
+
+/* --- ACCORDION ADDITIONS --- */
+.clark-accordion-summary {
+    list-style: none;
+    /* Hide default triangle */
+    cursor: pointer;
+    justify-content: space-between;
+    /* Push + to right */
+}
+
+.clark-accordion-summary::-webkit-details-marker {
+    display: none;
+}
+
+.clark-list-title-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.clark-accordion-summary:hover .clark-list-text,
+a.clark-list-text:hover {
+    color: var(--clark-accent) !important;
+    transition: color 0.3s ease;
+}
+
+.clark-accordion-content {
+    padding: 15px 20px 20px 45px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #475569;
+    animation: fadeIn 0.3s ease;
+    border-left: 2px solid var(--clark-accent);
+    margin-left: 20px;
+    text-align: justify;
+    /* Justify the content text */
+}
+
+.clark-accordion-content p {
+    margin: 0 0 15px 0;
+    /* Add bottom spacing to paragraphs */
+}
+
+.clark-accordion-content p:last-child,
+.clark-accordion-content ol:last-child,
+.clark-accordion-content ul:last-child {
+    margin-bottom: 0;
+}
+
+.clark-accordion-content ol,
+.clark-accordion-content ul {
+    margin: 0 0 15px 0;
+    padding-left: 20px;
+}
+
+.clark-accordion-content li {
+    margin-bottom: 10px;
+}
+
+.clark-accordion-content li:last-child {
+    margin-bottom: 0;
 }
 
 /* --- PHILOSOPHY CTA SECTION --- */
@@ -235,7 +302,7 @@
         padding: 40px 20px;
     }
 
-    .clark-practice-list {
+    .clark-practice-list-columns {
         grid-template-columns: 1fr;
     }
 
