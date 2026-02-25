@@ -1,0 +1,394 @@
+/* RESET & BASE */
+/* =========================================
+   ESTILOS UNIVERSALES DE TIPOGRAFÍA (MASTER)
+   ========================================= */
+
+.section-title {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 3rem;
+    /* Tamaño grande y autoritario */
+    font-weight: 800;
+    /* Extra Bold */
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    /* Moderno y compacto */
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-align: center;
+    /* Siempre centrado por defecto */
+    color: var(--primary);
+    /* Color por defecto: Navy Blue */
+
+    /* Truco para evitar saltos de línea feos */
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-subtitle {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.125rem;
+    /* 18px */
+    font-weight: 400;
+    /* Regular */
+    color: #64748b;
+    /* Gris suave (Slate 500) */
+    text-align: center;
+    line-height: 1.6;
+    max-width: 700px;
+    /* Ancho de lectura cómodo */
+    margin: 0 auto 60px;
+    /* Margen inferior estándar para todas las secciones */
+}
+
+/* VARIANTE: MODO OSCURO (Para fondos azules/negros) */
+.section-title.light-mode {
+    color: #ffffff;
+}
+
+.section-subtitle.light-mode {
+    color: #cbd5e1;
+    /* Gris muy claro (Slate 300) para contraste en oscuro */
+}
+
+/* RESPONSIVE: Ajuste automático para móviles */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+        /* Más pequeño en celular para que no rompa */
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: #f9f9f9;
+}
+
+/* VARIABLES */
+:root {
+    --primary: #111111;
+    /* Navy Blue oscuro */
+    --accent: #c5a059;
+    /* Gold elegante */
+    --text: #334155;
+    --white: #ffffff;
+}
+
+/* Responsive Contact */
+@media (max-width: 900px) {
+    .contact-section {
+        grid-template-columns: 1fr;
+        padding: 60px 20px;
+    }
+
+    .contact-info {
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .contact-info h2,
+    .contact-info p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .urgent-call {
+        text-align: center;
+    }
+
+    .contact-form-wrapper {
+        padding: 30px 20px;
+    }
+}
+
+/* FLOATING CHAT BUTTON */
+.chat-widget {
+    position: fixed;
+    /* La clave para que se mueva con la pantalla */
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--accent);
+    /* Dorado */
+    border-radius: 50%;
+    /* Lo hace redondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1000;
+    /* Siempre encima de todo */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+}
+
+.chat-widget:hover {
+    transform: scale(1.1) translateY(-5px);
+    /* Efecto de salto al pasar el mouse */
+    background-color: #fff;
+    /* Cambio de color al hover */
+    box-shadow: 0 10px 25px rgba(197, 160, 89, 0.4);
+    /* Resplandor dorado */
+}
+
+.chat-icon {
+    width: 28px;
+    height: 28px;
+    fill: #fff;
+    /* Icono blanco por defecto */
+    transition: fill 0.3s;
+}
+
+.chat-widget:hover .chat-icon {
+    fill: var(--accent);
+    /* El icono se vuelve dorado al hover */
+}
+
+/* Tooltip (Texto "Chat with us" que aparece al lado) */
+.chat-tooltip {
+    position: absolute;
+    right: 70px;
+    background: #fff;
+    color: var(--primary);
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    opacity: 0;
+    /* Invisible por defecto */
+    visibility: hidden;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+.chat-widget:hover .chat-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .chat-widget {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+    }
+}
+
+/* COOKIE BANNER */
+.cookie-consent-banner {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 320px;
+    background-color: #111111;
+    /* Negro elegante */
+    padding: 25px;
+    z-index: 9999;
+    /* Por encima de todo, incluso del chat */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    /* Sombra profunda */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 4px solid var(--accent);
+    /* Detalle dorado */
+    display: none;
+    /* Oculto por defecto hasta que JS diga lo contrario */
+    animation: slideUp 0.5s ease-out;
+}
+
+.cookie-title {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.cookie-text {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.cookie-btn {
+    background-color: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.cookie-btn:hover {
+    background-color: #b08d4b;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* En móviles, que ocupe todo el ancho abajo */
+@media (max-width: 768px) {
+    .cookie-consent-banner {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border-left: none;
+        border-top: 4px solid var(--accent);
+    }
+}
+
+.lang-switch {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 25px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    user-select: none;
+}
+
+.lang-opt {
+    cursor: pointer;
+    /* CAMBIO: Color oscuro para que se vea sobre fondo blanco */
+    color: var(--primary);
+    opacity: 0.4;
+    /* Inactivo un poco transparente */
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.lang-opt:hover {
+    opacity: 1;
+    color: var(--accent);
+    /* Dorado al pasar el mouse */
+}
+
+/* El idioma activo se queda Dorado y totalmente visible */
+.lang-opt.active {
+    opacity: 1;
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    /* Hice la línea un poco más gruesa */
+}
+
+.lang-divider {
+    /* CAMBIO: Gris visible en lugar de blanco transparente */
+    color: #cbd5e1;
+    margin: 0 8px;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .lang-switch {
+        display: none;
+    }
+}
+
+/* =========================================
+   LOGO TIPOGRÁFICO (INTEGRACIÓN PHP)
+   ========================================= */
+
+/* 1. Limpiamos el contenedor viejo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* 2. Estilizamos el enlace (<a>) que ahora es .brand-logo */
+.brand-logo {
+    display: flex;
+    flex-direction: column;
+    /* Apila los textos verticalmente */
+    text-decoration: none !important;
+    /* Fuerza quitar subrayado */
+    line-height: 1;
+    justify-content: center;
+    color: inherit;
+    /* Hereda el color del padre o usa blanco */
+}
+
+/* Texto Superior: "THE LAW OFFICES OF" */
+.brand-sub {
+    /* CAMBIO AQUÍ: Usamos negro (#111) o gris oscuro (#333) */
+    /* Si tu menú fuera negro, aquí pondrías #ffffff (blanco) */
+    color: #111111 !important;
+
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    margin-bottom: 3px;
+    display: block;
+}
+
+/* Texto Inferior: "BOB NEHORAY" */
+.brand-main {
+    /* Este se queda DORADO */
+    color: #c5a059;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+}
+
+/* Hover */
+.brand-logo:hover .brand-main {
+    color: #d4ac5e;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .brand-sub {
+        font-size: 0.55rem;
+        letter-spacing: 1.5px;
+    }
+
+    .brand-main {
+        font-size: 1.4rem;
+    }
+}
+
+/* TRUCO DE MAGIA: */
+/* El contenedor nace invisible para evitar el flash azul */
+#voiceflow-chat {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    transition: opacity 0.2s ease;
+    /* Transición suave al aparecer */
+}

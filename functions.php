@@ -141,6 +141,7 @@ function nehoraynew_scripts() {
 	wp_enqueue_style( 'nehoraynew-style', get_stylesheet_uri(), array(), _S_VERSION );
     wp_enqueue_style( 'nehoraynew-custom-style', get_template_directory_uri() . '/assets/css/style.css', array(), _S_VERSION );
 	wp_enqueue_style( 'nehoraynew-layout', get_template_directory_uri() . '/assets/css/layout.css', array(), _S_VERSION );
+    wp_enqueue_style( 'nehoraynew-header', get_template_directory_uri() . '/assets/css/header.css', array(), _S_VERSION );
 
 // Conditional Load for Home Page (Front Page)
     if ( is_front_page() ) {
