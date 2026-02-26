@@ -50,44 +50,35 @@ get_header();
             </div>
         </div>
 
-        <!-- <h3 class="associates-title">Senior Associates</h3>
-        
+        <h3 class="associates-title">Our Team</h3>
+
         <div class="team-grid">
-            
-            <article class="attorney-card">
-                <div class="attorney-image-wrapper">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Sarah Miller" loading="lazy">
-                </div>
-                <div class="attorney-info">
-                    <h3 class="attorney-name">Jackie Martinez</h3>
-                    <div class="attorney-role">Senior Litigator</div>
-                    <p class="attorney-bio-snippet">Specializing in high-stakes employment law and discrimination cases. Sarah ensures that corporations are held accountable for workplace violations.</p>
-                </div>
-            </article>
 
-            <article class="attorney-card">
-                <div class="attorney-image-wrapper">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Elena Rodriguez" loading="lazy">
-                </div>
+            <div class="attorney-card">
+                <img src="/wp-content/themes/nehoray-law/assets/img/VannesaGuzman2.png" alt="Vannesa Guzman">
                 <div class="attorney-info">
-                    <h3 class="attorney-name">Alexi Martirosyan</h3>
-                    <div class="attorney-role">Workers' Comp Specialist</div>
-                    <p class="attorney-bio-snippet">Elena leads our Workers' Compensation division. Her compassionate approach helps injured workers navigate the complex benefits system.</p>
+                    <span class="attorney-role">Attorney at Law</span>
+                    <h4 class="attorney-name">Vannesa<br>Guzman</h4>
                 </div>
-            </article>
+            </div>
 
-            <article class="attorney-card">
-                <div class="attorney-image-wrapper">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Michael Ross" loading="lazy">
-                </div>
+            <div class="attorney-card">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="David Yeremian">
                 <div class="attorney-info">
-                    <h3 class="attorney-name">Brandon Villalvazo</h3>
-                    <div class="attorney-role">Personal Injury Trial Lawyer</div>
-                    <p class="attorney-bio-snippet">Focusing on catastrophic injury and wrongful death. Michael brings aggressive representation to maximize client settlements against insurance giants.</p>
+                    <span class="attorney-role">Comming Soon</span>
+                    <h4 class="attorney-name">Comming<br>Soon</h4>
                 </div>
-            </article>
+            </div>
 
-        </div> -->
+            <div class="attorney-card">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Brandon Ruiz">
+                <div class="attorney-info">
+                    <span class="attorney-role">Comming Soon</span>
+                    <h4 class="attorney-name">Comming<br>Soon</h4>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <section class="referral-section">
