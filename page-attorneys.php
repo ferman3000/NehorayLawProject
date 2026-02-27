@@ -63,10 +63,10 @@ get_header();
             </div>
 
             <div class="attorney-card">
-                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="David Yeremian">
+                <img src="/wp-content/themes/nehoray-law/assets/img/LorenaGarcia.png" alt="Lorena Garcia">
                 <div class="attorney-info">
-                    <span class="attorney-role">Comming Soon</span>
-                    <h4 class="attorney-name">Comming<br>Soon</h4>
+                    <span class="attorney-role">Hearing representative</span>
+                    <h4 class="attorney-name">Lorena<br>Garcia</h4>
                 </div>
             </div>
 
