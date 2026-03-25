@@ -33,18 +33,27 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    background: var(--white);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background: var(--primary);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+nav.scrolled {
+    background: rgba(17, 17, 17, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 12px 5%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: 800;
-    color: var(--primary);
+    color: var(--white);
     text-transform: uppercase;
     letter-spacing: -1px;
 }
@@ -60,7 +69,7 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--primary);
+    color: var(--white);
     font-weight: 500;
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -143,7 +152,7 @@ footer p {
 
     .mobile-menu {
         display: block;
-        color: var(--primary);
+        color: var(--white);
     }
 }
 
@@ -174,11 +183,11 @@ footer p {
         top: 100%;
         left: 0;
         width: 100%;
-        background: #ffffff;
+        background: var(--primary);
         flex-direction: column;
         padding: 20px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        border-top: 1px solid #f1f1f1;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
         z-index: 2000;
         /* High z-index to sit on top */
     }
@@ -193,16 +202,16 @@ footer p {
     .nav-links a {
         display: block;
         padding: 15px 0;
-        border-bottom: 1px solid #f8fafc;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         width: 100%;
         text-align: center;
         font-size: 1.1rem;
-        color: var(--primary);
+        color: var(--white);
     }
 
     .mobile-menu {
         display: block;
-        color: var(--primary);
+        color: #ffffff !important;
         font-size: 2rem;
         user-select: none;
         cursor: pointer;

@@ -147,9 +147,9 @@ function nehoraynew_scripts() {
     if ( is_front_page() ) {
         wp_enqueue_style( 'nehoray-home', get_template_directory_uri() . '/assets/css/home.css', array('nehoraynew-style'), _S_VERSION );
     }
-    // Conditional Load for Attorneys Page
-    if ( is_page_template( 'page-attorneys.php' ) || is_page('attorneys') ) {
-        wp_enqueue_style( 'nehoray-attorneys', get_template_directory_uri() . '/assets/css/attorneys.css', array(), _S_VERSION );
+    // Conditional Load for Attorneys/Meet Our Team Page
+    if ( is_page_template( 'page-meet-our-team.php' ) || is_page('meet-our-team') || is_page_template( 'page-attorneys.php' ) || is_page('attorneys') ) {
+        wp_enqueue_style( 'nehoray-meet-our-team', get_template_directory_uri() . '/assets/css/meet-our-team.css', array(), _S_VERSION );
     }
 
 	// Conditional Load for Contact Page

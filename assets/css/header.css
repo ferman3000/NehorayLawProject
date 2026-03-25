@@ -345,7 +345,7 @@ body {
 .brand-sub {
     /* CAMBIO AQUÍ: Usamos negro (#111) o gris oscuro (#333) */
     /* Si tu menú fuera negro, aquí pondrías #ffffff (blanco) */
-    color: #111111 !important;
+    color: #ffffff !important;
 
     font-family: 'Helvetica', 'Arial', sans-serif;
     font-size: 0.65rem;

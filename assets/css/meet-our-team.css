@@ -133,9 +133,15 @@
 /* 3. GRID DE EQUIPO */
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     margin-top: 50px;
+}
+
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* 4. SECCIÓN REFERIDOS */
@@ -253,13 +259,45 @@
     margin-bottom: 60px;
 }
 
-.associates-title {
+
+.office-title {
     text-align: center;
+    font-size: 2.2rem;
+    color: var(--accent, #c5a059);
+    margin-top: 80px;
+    margin-bottom: 10px;
+    font-weight: 800;
+    position: relative;
+    padding-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.office-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent, #c5a059);
+}
+
+.department-title {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #000000;
+    margin-top: 80px;
+    /* Space above when starting a new section alone */
     margin-bottom: 40px;
-    font-size: 1.8rem;
-    color: #111;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: -1px;
+    letter-spacing: 3px;
+}
+
+/* When the department title comes directly after the office title, tighten the spacing back */
+.office-title+.department-title {
+    margin-top: 5px;
 }
 
 .referral-description {
@@ -287,14 +325,23 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-    aspect-ratio: 3 / 4;
+    width: 280px;
+    /* Reduced width to match standard portrait image size */
+    height: 420px;
+    /* Increased to allow 10% more room for the bottom black box */
+    display: flex;
+    flex-direction: column;
 }
 
 .attorney-card img {
     width: 100%;
-    height: 100%;
+    height: 286px;
+    /* Increased to give heads more room without scaling crop issue */
     object-fit: cover;
-    object-position: top center;
+    /* changed from contain to cover so it fills the width */
+    object-position: bottom center;
+    background-color: #f7f7f7;
+    /* Background color for empty spaces if aspect ratios don't match */
     display: block;
     transition: transform 0.4s ease;
 }
@@ -304,21 +351,20 @@
 }
 
 .attorney-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    flex-grow: 1;
     background: #000000;
-    padding: 22px 24px 28px;
+    padding: 15px 20px;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    justify-content: space-between;
+    /* Pushes role to top and name to bottom */
+    box-sizing: border-box;
 }
 
 .attorney-role {
     display: block;
     color: #ffffff;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -327,7 +373,7 @@
 
 .attorney-name {
     color: #C5A059;
-    font-size: 2.1rem;
+    font-size: 1.3rem;
     font-weight: 800;
     margin: 0;
     line-height: 1.1;
@@ -346,7 +392,7 @@
     }
 
     .attorney-info {
-        gap: 14px;
+        height: 210px;
         padding: 18px 20px 22px;
     }
 }
