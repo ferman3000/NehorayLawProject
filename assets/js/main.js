@@ -64,6 +64,63 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // --- MEMBER DETAIL OVERLAY ---
+    const overlay = document.getElementById('memberDetailOverlay');
+    if (overlay) {
+        const detailPhoto = document.getElementById('detailPhoto');
+        const detailName = document.getElementById('detailName');
+        const detailRole = document.getElementById('detailRole');
+        const detailBio = document.getElementById('detailBio');
+        const closeBtn = document.getElementById('memberDetailClose');
+
+        const cards = document.querySelectorAll('.attorney-card');
+        cards.forEach(card => {
+            const roleEl = card.querySelector('.attorney-role');
+            if (roleEl && roleEl.textContent.trim() === 'Attorney') {
+                card.classList.add('clickable');
+            }
+
+            card.addEventListener('click', function () {
+                const role = this.querySelector('.attorney-role');
+                if (!role || role.textContent.trim() !== 'Attorney') return;
+
+                const img = this.querySelector('img');
+                const nameEl = this.querySelector('.attorney-name');
+                const lastnameEl = this.querySelector('.attorney-lastname');
+
+                detailPhoto.src = img.src;
+                detailPhoto.alt = img.alt;
+
+                const fullName = (nameEl ? nameEl.textContent : '') + ' ' + (lastnameEl ? lastnameEl.textContent : '');
+                detailName.textContent = fullName.trim();
+                detailRole.textContent = role ? role.textContent : '';
+                detailBio.textContent = 'A dedicated member of the Nehoray Law team with years of experience in the legal field. Their commitment to excellence and passion for justice drives every case they handle. Whether navigating complex workers\' compensation claims, personal injury litigation, or employment law disputes, they bring a meticulous approach and deep understanding of California law to protect our clients\' rights. Known for their strong communication skills and compassionate client care, they work tirelessly to ensure every client feels heard, informed, and confident throughout the legal process. Their contributions to the firm have been instrumental in securing favorable outcomes and building lasting relationships with the communities we serve.';
+
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function closeOverlay() {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        closeBtn.addEventListener('click', closeOverlay);
+
+        overlay.addEventListener('click', function (e) {
+            if (e.target === overlay) {
+                closeOverlay();
+            }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && overlay.classList.contains('active')) {
+                closeOverlay();
+            }
+        });
+    }
+
     // --- HEADER SCROLL EFFECT ---
     const nav = document.querySelector("nav");
     if (nav) {

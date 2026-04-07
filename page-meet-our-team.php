@@ -409,6 +409,15 @@ get_header();
             </div> 
 
             <div class="attorney-card">
+                <img src="/wp-content/themes/nehoray-law/assets/img/SamanthaMarten.png" alt="Samantha Marten">
+                <div class="attorney-info">
+                    <span class="attorney-role">Intake Representative</span> 
+                    <h4 class="attorney-name">Samantha</h4>
+                    <h4 class="attorney-lastname">Marten</h4>
+                </div>
+            </div> 
+
+            <div class="attorney-card">
                 <img src="/wp-content/themes/nehoray-law/assets/img/RyanVelez.png" alt="Ryan Velez">
                 <div class="attorney-info">
                     <span class="attorney-role">Intake Support</span> 
@@ -451,6 +460,24 @@ get_header();
                     <span class="attorney-role">Intake Support</span> 
                     <h4 class="attorney-name">Alexander</h4>
                     <h4 class="attorney-lastname">Sereno</h4>
+                </div>
+            </div> 
+
+            <div class="attorney-card">
+                <img src="/wp-content/themes/nehoray-law/assets/img/AbeMerhi.png" alt="Abe Merhi">
+                <div class="attorney-info">
+                    <span class="attorney-role">Intake Support</span> 
+                    <h4 class="attorney-name">Abe</h4>
+                    <h4 class="attorney-lastname">Merhi</h4>
+                </div>
+            </div> 
+
+            <div class="attorney-card">
+                <img src="/wp-content/themes/nehoray-law/assets/img/VergienaCancilao.png" alt="Vergiena Cancilao">
+                <div class="attorney-info">
+                    <span class="attorney-role">Intake Support</span> 
+                    <h4 class="attorney-name">Vergiena</h4>
+                    <h4 class="attorney-lastname">Cancilao</h4>
                 </div>
             </div> 
         </div>
@@ -522,14 +549,6 @@ get_header();
                 </div>
             </div>
             <div class="attorney-card">
-                <img src="/wp-content/themes/nehoray-law/assets/img/LanzPositos.png" alt="Lanz Positos">
-                <div class="attorney-info">
-                    <span class="attorney-role">Medical Team </span> 
-                    <h4 class="attorney-name">Lanz</h4>
-                    <h4 class="attorney-lastname">Positos</h4>
-                </div>
-            </div>
-            <div class="attorney-card">
                 <img src="/wp-content/themes/nehoray-law/assets/img/MaureenGallo.png" alt="Maureen Gallo">
                 <div class="attorney-info">
                     <span class="attorney-role">Medical Team </span> 
@@ -544,7 +563,7 @@ get_header();
             <div class="attorney-card">
                 <img src="/wp-content/themes/nehoray-law/assets/img/AndreaBeso.png" alt="Andrea Beso">
                 <div class="attorney-info">
-                    <span class="attorney-role">Legal Assistant</span> 
+                    <span class="attorney-role">Interim QME Supervisor</span> 
                     <h4 class="attorney-name">Andrea</h4>
                     <h4 class="attorney-lastname">Beso</h4>
                 </div>
@@ -555,6 +574,14 @@ get_header();
                     <span class="attorney-role">Legal Assistant</span> 
                     <h4 class="attorney-name">Koji</h4>
                     <h4 class="attorney-lastname">Vergara</h4>
+                </div>
+            </div>
+            <div class="attorney-card">
+                <img src="/wp-content/themes/nehoray-law/assets/img/AiraOlvida.png" alt="Aira Olvida">
+                <div class="attorney-info">
+                    <span class="attorney-role">Legal Assistant</span> 
+                    <h4 class="attorney-name">Aira</h4>
+                    <h4 class="attorney-lastname">Olvida</h4>
                 </div>
             </div>
         </div>  
@@ -627,6 +654,15 @@ get_header();
                 </div>
             </div>
 
+            <!-- <div class="attorney-card">
+                <img src="/wp-content/themes/nehoray-law/assets/img/VanessaTorres.png" alt="Vanessa Torres">
+                <div class="attorney-info">
+                    <span class="attorney-role">Administrative Assistant</span> 
+                    <h4 class="attorney-name">Vanessa</h4>
+                    <h4 class="attorney-lastname">Torres</h4>
+                </div>
+            </div> -->
+
             <div class="attorney-card">
                 <img src="/wp-content/themes/nehoray-law/assets/img/ShielaJavier.png" alt="Shiela Javier">
                 <div class="attorney-info">
@@ -642,6 +678,24 @@ get_header();
                     <span class="attorney-role">Receptionist</span> 
                     <h4 class="attorney-name">Michelle</h4>
                     <h4 class="attorney-lastname">Funelas</h4>
+                </div>
+            </div>
+
+            <div class="attorney-card">
+                <img src="/wp-content/themes/nehoray-law/assets/img/FabiReyes.png" alt="Fabi Reyes">
+                <div class="attorney-info">
+                    <span class="attorney-role">Assistant to Bob Nehoray</span> 
+                    <h4 class="attorney-name">Fabi</h4>
+                    <h4 class="attorney-lastname">Reyes</h4>
+                </div>
+            </div>
+
+            <div class="attorney-card">
+                <img src="/wp-content/themes/nehoray-law/assets/img/HectorRamos.png" alt="Hector Ramos">
+                <div class="attorney-info">
+                    <span class="attorney-role">Settlements</span> 
+                    <h4 class="attorney-name">Hector</h4>
+                    <h4 class="attorney-lastname">Ramos</h4>
                 </div>
             </div>
 
@@ -673,6 +727,22 @@ get_header();
         <!-- <h3 class="office-title">BAKERSFIELD OFFICE</h3> -->   
 
     </section>
+
+    <!-- OVERLAY DE DETALLE DE MIEMBRO -->
+    <div class="member-detail-overlay" id="memberDetailOverlay">
+        <div class="member-detail-container">
+            <button class="member-detail-close" id="memberDetailClose">&times;</button>
+            <div class="member-detail-photo">
+                <img id="detailPhoto" src="" alt="">
+            </div>
+            <div class="member-detail-info">
+                <span class="member-detail-role" id="detailRole"></span>
+                <h2 class="member-detail-name" id="detailName"></h2>
+                <div class="member-detail-divider"></div>
+                <p class="member-detail-bio" id="detailBio"></p>
+            </div>
+        </div>
+    </div>
 
     <section class="referral-section">
         <div class="referral-container">
