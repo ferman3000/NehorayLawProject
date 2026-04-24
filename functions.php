@@ -150,6 +150,7 @@ function nehoraynew_scripts() {
     // Conditional Load for Attorneys/Meet Our Team Page
     if ( is_page_template( 'page-meet-our-team.php' ) || is_page('meet-our-team') || is_page_template( 'page-attorneys.php' ) || is_page('attorneys') ) {
         wp_enqueue_style( 'nehoray-meet-our-team', get_template_directory_uri() . '/assets/css/meet-our-team.css', array(), _S_VERSION );
+        wp_enqueue_script( 'nehoray-team-filter', get_template_directory_uri() . '/assets/js/meet-our-team-filter.js', array(), _S_VERSION, true );
     }
 
 	// Conditional Load for Contact Page
@@ -520,3 +521,72 @@ function nehoray_handle_chat_submit() {
 // Registramos el hook para usuarios logueados y visitantes
 add_action( 'wp_ajax_nehoray_chat_submit', 'nehoray_handle_chat_submit' );
 add_action( 'wp_ajax_nopriv_nehoray_chat_submit', 'nehoray_handle_chat_submit' );
+
+/**
+ * ── SOCIAL PROOF TOAST ──
+ * Settings page + enqueue for the settlement notification toasts.
+ */
+
+// 1. Register settings
+function nehoray_sp_register_settings() {
+    register_setting( 'nehoray_sp_options', 'nehoray_sp_sheet_id', 'sanitize_text_field' );
+}
+add_action( 'admin_init', 'nehoray_sp_register_settings' );
+
+// 2. Add settings page under Settings menu
+function nehoray_sp_add_settings_page() {
+    add_options_page(
+        'Social Proof Toast',
+        'Social Proof Toast',
+        'manage_options',
+        'nehoray-social-proof',
+        'nehoray_sp_settings_html'
+    );
+}
+add_action( 'admin_menu', 'nehoray_sp_add_settings_page' );
+
+// 3. Settings page HTML
+function nehoray_sp_settings_html() {
+    if ( ! current_user_can( 'manage_options' ) ) return;
+    $sheet_id = get_option( 'nehoray_sp_sheet_id', '' );
+    ?>
+    <div class="wrap">
+        <h1>Social Proof Toast Settings</h1>
+        <p>Configure the Google Sheet that powers the settlement notification toasts.</p>
+        <form method="post" action="options.php">
+            <?php settings_fields( 'nehoray_sp_options' ); ?>
+            <table class="form-table">
+                <tr>
+                    <th scope="row"><label for="nehoray_sp_sheet_id">Google Sheet ID</label></th>
+                    <td>
+                        <input type="text" id="nehoray_sp_sheet_id" name="nehoray_sp_sheet_id"
+                               value="<?php echo esc_attr( $sheet_id ); ?>" class="regular-text" />
+                        <p class="description">
+                            The Sheet ID is the long string in the Google Sheets URL:<br>
+                            <code>https://docs.google.com/spreadsheets/d/<strong>{THIS_PART}</strong>/edit</code><br><br>
+                            <strong>Required columns:</strong> Attorney | Location | Amount | Case Type<br>
+                            <strong>Important:</strong> The sheet must be published to web (File &rarr; Share &rarr; Publish to web).
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <?php submit_button( 'Save Settings' ); ?>
+        </form>
+    </div>
+    <?php
+}
+
+// 4. Enqueue toast assets on frontend (only if Sheet ID is configured)
+/* TEMPORARILY DISABLED - Social Proof Toast
+function nehoray_sp_enqueue_assets() {
+    $sheet_id = get_option( 'nehoray_sp_sheet_id', '' );
+    if ( empty( $sheet_id ) ) return;
+
+    wp_enqueue_style( 'nehoray-sp-toast', get_template_directory_uri() . '/assets/css/social-proof-toast.css', array(), _S_VERSION );
+    wp_enqueue_script( 'nehoray-sp-toast', get_template_directory_uri() . '/assets/js/social-proof-toast.js', array(), _S_VERSION, true );
+    wp_localize_script( 'nehoray-sp-toast', 'socialProofData', array(
+        'sheetId' => $sheet_id
+    ));
+}
+add_action( 'wp_enqueue_scripts', 'nehoray_sp_enqueue_assets' );
+*/
