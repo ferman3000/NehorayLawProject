@@ -560,6 +560,53 @@ footer p {
     height: 120px;
 }
 
+.sms-consent-group {
+    margin: 20px 0 25px;
+}
+
+.sms-consent-checkbox {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.sms-consent-checkbox .wpcf7-form-control-wrap {
+    flex-shrink: 0;
+    line-height: 0;
+}
+
+.sms-consent-checkbox .wpcf7-acceptance {
+    display: inline;
+}
+
+.sms-consent-checkbox .wpcf7-list-item {
+    list-style: none;
+    margin: 0;
+}
+
+.sms-consent-checkbox .wpcf7-list-item label {
+    display: inline;
+}
+
+.sms-consent-checkbox input[type="checkbox"] {
+    accent-color: var(--accent, #c5a059);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.sms-consent-text {
+    font-size: 0.7rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 10px 0 0 0;
+}
+
 .submit-btn {
     width: 100%;
     padding: 18px;

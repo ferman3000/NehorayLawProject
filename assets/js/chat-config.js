@@ -69,7 +69,7 @@ window.chatConfig = {
         next: "wc_permission"
     },
     wc_permission: {
-        message: "May we have someone from our Law Firm reach out to you to discuss your case further?",
+        message: "May we have someone from our Law Firm reach out to you to discuss your case further? This may include phone calls, text messages, or emails. Standard message and data rates may apply.",
         type: "buttons",
         key: "permission_contact",
         options: [
@@ -145,7 +145,7 @@ window.chatConfig = {
         next: "pi_permission"
     },
     pi_permission: {
-        message: "May we have someone from our Law Firm reach out to you to discuss your case further?",
+        message: "May we have someone from our Law Firm reach out to you to discuss your case further? This may include phone calls, text messages, or emails. Standard message and data rates may apply.",
         type: "buttons",
         key: "permission_contact",
         options: [
