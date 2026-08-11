@@ -27,7 +27,7 @@
     var visibleCount = 0;
 
     cards.forEach(function (card) {
-      var matchDept = activeDept === 'all' || card.getAttribute('data-dept') === activeDept;
+      var matchDept = activeDept === 'all' || card.getAttribute('data-dept').split(' ').indexOf(activeDept) !== -1;
       var matchOffice = activeOffice === 'all' || card.getAttribute('data-office') === activeOffice || card.getAttribute('data-office') === 'all';
 
       if (matchDept && matchOffice) {

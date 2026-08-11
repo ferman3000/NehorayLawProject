@@ -31,6 +31,7 @@
             <a href="<?php echo home_url('/meet-our-team'); ?>" class="<?php echo is_page('meet-our-team') ? 'active' : ''; ?>" style="color: <?php echo is_page('meet-our-team') ? 'var(--accent)' : 'var(--white)'; ?>;">Meet our Team</a>
             <a href="<?php echo home_url('/testimonies'); ?>" class="<?php echo is_page('testimonies') ? 'active' : ''; ?>" style="color: <?php echo is_page('testimonies') ? 'var(--accent)' : 'var(--white)'; ?>;">Testimonials</a>
             <a href="<?php echo home_url('/blog'); ?>" class="<?php echo ( ( is_home() && ! is_front_page() ) || is_single() ) ? 'active' : ''; ?>" style="color: <?php echo ( ( is_home() && ! is_front_page() ) || is_single() ) ? 'var(--accent)' : 'var(--white)'; ?>;">Blog</a>
+            <!-- <a href="<?php echo home_url('/attorney-referrals'); ?>" class="<?php echo is_page('attorney-referrals') ? 'active' : ''; ?>" style="color: <?php echo is_page('attorney-referrals') ? 'var(--accent)' : 'var(--white)'; ?>;">Attorney Referrals</a> -->
             <a href="<?php echo home_url('/contact'); ?>" class="<?php echo is_page('contact') ? 'active' : ''; ?>" style="color: <?php echo is_page('contact') ? 'var(--accent)' : 'var(--white)'; ?>;">Contact</a>
             <!-- <div class="lang-switch">
                 <span class="lang-opt active">EN</span>

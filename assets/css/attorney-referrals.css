@@ -1,0 +1,424 @@
+/* =========================================
+   ATTORNEY REFERRALS PAGE
+   ========================================= */
+
+/* HERO */
+.hero-referrals {
+    background: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.85)),
+        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=2400&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 60px;
+}
+
+.hero-referrals h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+}
+
+.hero-referrals p {
+    font-size: 1.15rem;
+    color: #cbd5e1;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* TITLE OVERRIDE */
+.referrals-why .section-title,
+.referrals-areas .section-title,
+.referrals-process .section-title {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* CONTAINER */
+.referrals-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* WHY REFER SECTION */
+.referrals-why {
+    padding: 80px 0 60px;
+    background: #fff;
+}
+
+.referrals-features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.referral-feature {
+    text-align: center;
+    padding: 40px 25px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    border-top: 3px solid transparent;
+}
+
+.referral-feature:hover {
+    border-top-color: var(--accent, #c5a059);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+    color: var(--accent, #c5a059);
+    margin-bottom: 20px;
+}
+
+.referral-feature h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary, #111);
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+.referral-feature p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #64748b;
+}
+
+/* PRACTICE AREAS SECTION */
+.referrals-areas {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.area-card {
+    background: #111;
+    color: #fff;
+    padding: 40px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.area-card-accent {
+    width: 40px;
+    height: 4px;
+    background: var(--accent, #c5a059);
+    margin-bottom: 20px;
+}
+
+.area-card h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.area-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #94a3b8;
+}
+
+/* HOW IT WORKS SECTION */
+.referrals-process {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.process-steps {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+    margin-top: 20px;
+}
+
+.process-step {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+    padding: 30px;
+}
+
+.step-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #e2e8f0;
+    line-height: 1;
+    margin-bottom: 15px;
+    transition: color 0.3s;
+}
+
+.process-step:hover .step-number {
+    color: var(--accent, #c5a059);
+}
+
+.process-step h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary, #111);
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+.process-step p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #64748b;
+}
+
+.step-connector {
+    width: 60px;
+    height: 2px;
+    background: #e2e8f0;
+    margin-top: 55px;
+    flex-shrink: 0;
+}
+
+/* FORM SECTION */
+.referrals-form-section {
+    padding: 80px 0 100px;
+    background: #f8fafc;
+}
+
+.referral-form-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.referral-form-wrapper {
+    background: #fff;
+    padding: 50px;
+    border-radius: 4px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+}
+
+.form-header {
+    margin-bottom: 30px;
+}
+
+.form-header h2 {
+    font-size: 2rem;
+    color: var(--primary, #111);
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.form-header p {
+    color: #64748b;
+}
+
+/* CF7 FORM STYLES */
+.referral-form-wrapper .wpcf7 input[type="text"],
+.referral-form-wrapper .wpcf7 input[type="email"],
+.referral-form-wrapper .wpcf7 input[type="tel"],
+.referral-form-wrapper .wpcf7 input[type="url"],
+.referral-form-wrapper .wpcf7 select,
+.referral-form-wrapper .wpcf7 textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.referral-form-wrapper .wpcf7 input:focus,
+.referral-form-wrapper .wpcf7 select:focus,
+.referral-form-wrapper .wpcf7 textarea:focus {
+    background: #fff;
+    border-color: var(--accent, #c5a059);
+    outline: none;
+}
+
+.referral-form-wrapper .wpcf7 textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.referral-form-wrapper .wpcf7 input[type="submit"] {
+    width: 100%;
+    padding: 20px;
+    background: var(--accent, #c5a059);
+    color: #fff;
+    border: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1rem;
+}
+
+.referral-form-wrapper .wpcf7 input[type="submit"]:hover {
+    background: #b08d4b;
+}
+
+/* SIDEBAR */
+.referral-sidebar {
+    background: #111;
+    color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-top: 5px solid var(--accent, #c5a059);
+    position: sticky;
+    top: 100px;
+}
+
+.referral-sidebar .contact-eyebrow {
+    color: var(--accent, #c5a059);
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.referral-sidebar .contact-headline-small {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.referral-sidebar .contact-desc-small {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.sidebar-phone {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    background: #1a1a1a;
+    border-left: 3px solid var(--accent, #c5a059);
+}
+
+.sidebar-phone svg {
+    fill: var(--accent, #c5a059);
+    flex-shrink: 0;
+}
+
+.sidebar-phone span {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.sidebar-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 30px 0;
+}
+
+.sidebar-offices h4 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent, #c5a059);
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.sidebar-offices ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-offices li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.sidebar-offices li:last-child {
+    border-bottom: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .referrals-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-referrals h1 {
+        font-size: 2.5rem;
+    }
+
+    .referrals-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .areas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step-connector {
+        width: 2px;
+        height: 40px;
+        margin: 0;
+    }
+
+    .referral-form-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .referral-sidebar {
+        position: static;
+        order: 2;
+    }
+
+    .referral-form-wrapper {
+        order: 1;
+        padding: 30px 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-col {
+        margin-bottom: 20px;
+    }
+}

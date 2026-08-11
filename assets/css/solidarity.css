@@ -1,0 +1,528 @@
+/* =========================================
+   SOLIDARITY / CAMPAIGN PAGE
+   ========================================= */
+
+/* HERO */
+.sol-hero {
+    background: linear-gradient(135deg, rgba(17, 17, 17, 0.88), rgba(30, 30, 30, 0.82)),
+        url('https://images.unsplash.com/photo-1569862986409-a33b0e7f1b88?auto=format&fit=crop&w=2400&q=80');
+    background-size: cover;
+    background-position: center;
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 60px 5%;
+}
+
+.sol-hero-content {
+    max-width: 750px;
+}
+
+.sol-hero-badge {
+    display: inline-block;
+    background: rgba(197, 160, 89, 0.15);
+    border: 1px solid var(--accent, #c5a059);
+    color: var(--accent, #c5a059);
+    padding: 8px 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.sol-hero h1 {
+    font-size: 3.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+}
+
+.sol-hero-sub-en {
+    font-size: 1.15rem;
+    color: #e2e8f0;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.sol-hero-sub-es {
+    font-size: 1rem;
+    color: #94a3b8;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.sol-hero-btn {
+    display: inline-block;
+    background: var(--accent, #c5a059);
+    color: #fff;
+    padding: 18px 40px;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.sol-hero-btn:hover {
+    background: #b08d4b;
+    color: #fff;
+}
+
+/* CONTAINER */
+.sol-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* SECTION TITLES */
+.sol-section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary, #111);
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.sol-section-title.sol-centered {
+    text-align: center;
+}
+
+.sol-section-sub {
+    text-align: center;
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.sol-divider {
+    width: 50px;
+    height: 3px;
+    background: var(--accent, #c5a059);
+    margin: 35px 0;
+}
+
+/* INCIDENT SECTION */
+.sol-incident {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.sol-incident-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.sol-incident-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 15px;
+}
+
+.sol-incident-img img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* HOW WE CAN HELP */
+.sol-help {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.sol-help-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.sol-help-card {
+    background: #fff;
+    padding: 35px 25px;
+    border: 1px solid #e2e8f0;
+    border-top: 3px solid transparent;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.sol-help-card:hover {
+    border-top-color: var(--accent, #c5a059);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.sol-help-icon {
+    color: var(--accent, #c5a059);
+    margin-bottom: 20px;
+}
+
+.sol-help-card h3 {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary, #111);
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.sol-help-card > p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+.sol-help-es {
+    border-top: 1px solid #f1f5f9;
+    padding-top: 15px;
+}
+
+.sol-help-es h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--accent, #c5a059);
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.sol-help-es p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #94a3b8;
+    font-style: italic;
+}
+
+/* COMMUNITY / WE STAND WITH YOU */
+.sol-community {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.sol-community-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.sol-community-img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.sol-community-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #475569;
+}
+
+/* FORM SECTION */
+.sol-form-section {
+    padding: 80px 0 100px;
+    background: #f8fafc;
+}
+
+.sol-form-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.sol-form-wrapper {
+    background: #fff;
+    padding: 50px;
+    border-radius: 4px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+}
+
+.sol-form-header {
+    margin-bottom: 30px;
+}
+
+.sol-form-header h2 {
+    font-size: 1.8rem;
+    color: var(--primary, #111);
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.sol-form-header p {
+    color: #64748b;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* FORM ROWS */
+.sol-form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 5px;
+}
+
+.sol-form-col {
+    flex: 1;
+}
+
+/* CF7 FORM STYLES */
+.sol-form-wrapper .wpcf7 input[type="text"],
+.sol-form-wrapper .wpcf7 input[type="email"],
+.sol-form-wrapper .wpcf7 input[type="tel"],
+.sol-form-wrapper .wpcf7 select,
+.sol-form-wrapper .wpcf7 textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.sol-form-wrapper .wpcf7 input:focus,
+.sol-form-wrapper .wpcf7 select:focus,
+.sol-form-wrapper .wpcf7 textarea:focus {
+    background: #fff;
+    border-color: var(--accent, #c5a059);
+    outline: none;
+}
+
+.sol-form-wrapper .wpcf7 textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.sol-form-wrapper .wpcf7 input[type="submit"] {
+    width: 100%;
+    padding: 20px;
+    background: var(--accent, #c5a059);
+    color: #fff;
+    border: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1rem;
+}
+
+.sol-form-wrapper .wpcf7 input[type="submit"]:hover {
+    background: #b08d4b;
+}
+
+/* SIDEBAR */
+.sol-sidebar {
+    background: #111;
+    color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-top: 5px solid var(--accent, #c5a059);
+    position: sticky;
+    top: 100px;
+}
+
+.sol-sidebar-eyebrow {
+    color: var(--accent, #c5a059);
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.sol-sidebar-headline {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.sol-sidebar-desc {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.sol-sidebar-phone {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    background: #1a1a1a;
+    border-left: 3px solid var(--accent, #c5a059);
+}
+
+.sol-sidebar-phone svg {
+    fill: var(--accent, #c5a059);
+    flex-shrink: 0;
+}
+
+.sol-sidebar-phone span {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.sol-sidebar-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 30px 0;
+}
+
+.sol-sidebar-offices h4 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent, #c5a059);
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.sol-sidebar-offices ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sol-sidebar-offices li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.sol-sidebar-offices li:last-child {
+    border-bottom: none;
+}
+
+.sol-sidebar-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(197, 160, 89, 0.1);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.sol-sidebar-badge svg {
+    fill: var(--accent, #c5a059);
+    flex-shrink: 0;
+}
+
+.sol-sidebar-badge span {
+    font-size: 0.8rem;
+    color: #cbd5e1;
+    line-height: 1.4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .sol-help-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .sol-hero {
+        min-height: 55vh;
+        padding: 40px 5%;
+    }
+
+    .sol-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .sol-hero-sub-en {
+        font-size: 1rem;
+    }
+
+    .sol-incident-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .sol-incident-img {
+        order: -1;
+    }
+
+    .sol-incident-img img {
+        height: 280px;
+    }
+
+    .sol-help-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sol-community-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .sol-community-img {
+        order: -1;
+    }
+
+    .sol-community-img img {
+        height: 280px;
+    }
+
+    .sol-form-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .sol-sidebar {
+        position: static;
+        order: 2;
+    }
+
+    .sol-form-wrapper {
+        order: 1;
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sol-hero h1 {
+        font-size: 2rem;
+    }
+
+    .sol-hero-badge {
+        font-size: 0.7rem;
+        padding: 6px 14px;
+    }
+
+    .sol-hero-btn {
+        padding: 15px 30px;
+        font-size: 0.85rem;
+    }
+
+    .sol-section-title {
+        font-size: 1.5rem;
+    }
+}

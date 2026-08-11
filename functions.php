@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.9' );
+	define( '_S_VERSION', '1.1.0' );
 }
 
 /**
@@ -190,6 +190,16 @@ function nehoraynew_scripts() {
         wp_enqueue_style( 'nehoray-harassment', get_template_directory_uri() . '/assets/css/harassment.css', array('nehoray-practice-areas'), _S_VERSION );
         wp_enqueue_style( 'nehoray-employment-overview', get_template_directory_uri() . '/assets/css/employment-overview.css', array('nehoray-practice-areas'), _S_VERSION );
         wp_enqueue_style( 'nehoray-employment-faq', get_template_directory_uri() . '/assets/css/employment-faq.css', array('nehoray-practice-areas'), _S_VERSION );
+    }
+
+    // Conditional Load for Attorney Referrals Page
+    if ( is_page_template( 'page-attorney-referrals.php' ) || is_page('attorney-referrals') ) {
+        wp_enqueue_style( 'nehoray-referrals', get_template_directory_uri() . '/assets/css/attorney-referrals.css', array('nehoraynew-style'), _S_VERSION );
+    }
+
+    // Conditional Load for Solidarity Campaign Page
+    if ( is_page_template( 'page-solidarity.php' ) || is_page('solidarity') ) {
+        wp_enqueue_style( 'nehoray-solidarity', get_template_directory_uri() . '/assets/css/solidarity.css', array('nehoraynew-style'), _S_VERSION );
     }
 
 	// 2. NUEVO: Estilos para el Blog (Listado) Y Artículos individuales

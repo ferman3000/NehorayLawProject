@@ -611,6 +611,62 @@
     letter-spacing: -0.5px;
 }
 
+.founder-ig {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #C5A059;
+    font-size: 0.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    margin-left: 12px;
+    vertical-align: middle;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.founder-ig:hover {
+    color: #d4b46a;
+}
+
+.founder-ig:visited,
+.founder-ig:active {
+    color: #C5A059;
+}
+
+.founder-ig svg {
+    width: 22px;
+    height: 22px;
+}
+
+.attorney-social {
+    margin-top: 6px;
+}
+
+.attorney-social a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #C5A059;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.attorney-social a:hover {
+    color: #d4b46a;
+    transform: scale(1.15);
+}
+
+.attorney-social svg {
+    width: 18px;
+    height: 18px;
+}
+
 @media (max-width: 768px) {
     .team-grid {
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -629,6 +685,31 @@
 
 .attorney-card.clickable {
     cursor: pointer;
+}
+
+.attorney-card.clickable::after {
+    content: 'View Bio';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.55);
+    color: #c5a059;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.attorney-card.clickable:hover::after {
+    opacity: 1;
 }
 
 /* =========================================
@@ -721,6 +802,7 @@
 .member-detail-info {
     flex: 1;
     color: #fff;
+    position: relative;
     transform: translateX(40px);
     opacity: 0;
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s,
@@ -763,6 +845,8 @@
     line-height: 1.8;
     color: #94a3b8;
     margin: 0;
+    max-height: calc(1.8em * 8 + 0.9em);
+    overflow-y: auto;
 }
 
 /* RESPONSIVE OVERLAY */
