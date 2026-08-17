@@ -51,8 +51,8 @@ class LawChatWidget {
             <h3>Law Office of Bob Nehoray</h3>
           </div>
           <div class="law-chat-actions">
-            <button class="law-chat-icon-btn" title="Restart"><svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg></button>
-            <button class="law-chat-close" title="Close"><svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
+            <button class="law-chat-icon-btn" title="Restart"><svg viewBox="0 0 24 24" width="18" height="18" fill="#1a1a1a"><path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg></button>
+            <button class="law-chat-close" title="Close"><svg viewBox="0 0 24 24" width="20" height="20" fill="#1a1a1a"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
           </div>
         </div>
         
@@ -71,7 +71,7 @@ class LawChatWidget {
         <div class="law-chat-input-area">
           <input type="text" id="chat-input-field" placeholder="Message...">
           <button id="chat-send-btn">
-             <svg style="width:28px;height:28px;fill:white" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+             <svg style="width:28px;height:28px;fill:#1a1a1a" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
           </button>
         </div>
         

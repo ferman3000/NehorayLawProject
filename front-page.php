@@ -251,7 +251,7 @@ get_header();
             </div>
         </div> 
 
-        <?php echo do_shortcode( '[contact-form-7 id="67ef427" title="Home Form"]' ); ?> 
+        <?php echo do_shortcode( '[contact-form-7 id="c06dbd5" title="Contact form 1"]' ); ?> 
 
         <!-- <div class="contact-form-wrapper">
             

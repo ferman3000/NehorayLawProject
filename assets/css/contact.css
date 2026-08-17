@@ -268,7 +268,7 @@
     width: 100%;
     padding: 20px;
     background: var(--accent, #c5a059);
-    color: #fff;
+    color: #1a1a1a; /* contraste 7.4:1 sobre el dorado (WCAG 1.4.3) */
     border: none;
     font-weight: 800;
     text-transform: uppercase;

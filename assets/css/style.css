@@ -84,15 +84,19 @@
 .urgent-call {
     margin-top: 30px;
     padding: 30px;
-    background: #fff;
+    background: #111111; /* fondo oscuro: el dorado del teléfono pasa a 8:1 (WCAG 1.4.3) */
     border-left: 5px solid var(--accent);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .urgent-call h4 {
-    color: var(--primary);
+    color: #ffffff;
     font-size: 1.2rem;
     margin-bottom: 5px;
+}
+
+.urgent-call p {
+    color: #e2e8f0;
 }
 
 .phone-display {
@@ -230,7 +234,7 @@
 
 .cookie-btn {
     background-color: var(--accent);
-    color: #fff;
+    color: #1a1a1a; /* contraste 7.4:1 sobre el dorado (WCAG 1.4.3) */
     border: none;
     padding: 10px 20px;
     font-size: 0.8rem;
@@ -3263,4 +3267,77 @@
         padding: 30px 20px;
         font-size: 1.2rem;
     }
+}/* ============================================================
+   FORMULARIOS — reglas consolidadas (movidas del Personalizador)
+   Los selectores de atributo (input[type="..."]) ganan a las
+   reglas genéricas de style.css; así el diseño del formulario
+   se aplica siempre desde el tema, sin CSS en el Personalizador.
+   Contraste del botón: carbón sobre dorado 7.4:1 (WCAG 1.4.3).
+   ============================================================ */
+
+.contact-form-wrapper input[type="text"],
+.contact-form-wrapper input[type="email"],
+.contact-form-wrapper input[type="tel"],
+.contact-form-wrapper select,
+.contact-form-wrapper textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f8fafc;
+    box-sizing: border-box;
+}
+
+.contact-form-wrapper input:focus,
+.contact-form-wrapper select:focus,
+.contact-form-wrapper textarea:focus {
+    outline: none;
+    border-color: var(--accent, #c5a059);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
+    /* Nota: el indicador de foco se reforzará en el ticket de foco visible (WCAG 2.4.7) */
+}
+
+.contact-form-wrapper .form-label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: var(--primary, #0f172a);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* Neutralizar los <p>/<br> automáticos de WordPress dentro del formulario */
+.form-group p { margin: 0; }
+.form-group br { display: none; }
+.form-group { margin-bottom: 24px; }
+
+.submit-btn,
+input.wpcf7-submit {
+    width: 100%;
+    padding: 18px;
+    background-color: var(--accent, #c5a059);
+    color: #1a1a1a; /* contraste 7.4:1 sobre el dorado (WCAG 1.4.3) */
+    border: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.submit-btn:hover,
+input.wpcf7-submit:hover {
+    filter: brightness(0.9);
+}
+
+.wpcf7-response-output {
+    border-radius: 4px;
+    padding: 10px !important;
+    font-size: 0.9rem;
+    margin-top: 20px !important;
 }

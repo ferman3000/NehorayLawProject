@@ -151,14 +151,14 @@ body {
 .chat-icon {
     width: 28px;
     height: 28px;
-    fill: #fff;
-    /* Icono blanco por defecto */
+    fill: #1a1a1a;
+    /* Icono oscuro sobre la burbuja dorada: 7.4:1 (WCAG 1.4.11) */
     transition: fill 0.3s;
 }
 
 .chat-widget:hover .chat-icon {
-    fill: var(--accent);
-    /* El icono se vuelve dorado al hover */
+    fill: #8A6D2F;
+    /* Dorado oscuro: 4.9:1 sobre el fondo blanco del hover (WCAG 1.4.11) */
 }
 
 /* Tooltip (Texto "Chat with us" que aparece al lado) */
@@ -233,7 +233,7 @@ body {
 
 .cookie-btn {
     background-color: var(--accent);
-    color: #fff;
+    color: #1a1a1a; /* contraste 7.4:1 sobre el dorado (WCAG 1.4.3) */
     border: none;
     padding: 10px 20px;
     font-size: 0.8rem;

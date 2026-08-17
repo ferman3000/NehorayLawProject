@@ -903,6 +903,14 @@ get_header();
                 </div>
             </div>
             <div class="attorney-card" data-dept="admin" data-office="headquarters">
+                <img src="/wp-content/themes/nehoray-law/assets/img/placeholder-silhouette.png" alt="Edva Palero">
+                <div class="attorney-info">
+                    <span class="attorney-role">Assistant</span>
+                    <h4 class="attorney-name">Edva</h4>
+                    <h4 class="attorney-lastname">Palero</h4>
+                </div>
+            </div>
+            <div class="attorney-card" data-dept="admin" data-office="headquarters">
                 <img src="/wp-content/themes/nehoray-law/assets/img/EmeraHarris.jpg" alt="Emera Harris">
                 <div class="attorney-info">
                     <span class="attorney-role">Intern</span>
@@ -932,6 +940,14 @@ get_header();
                     </div>
                     <h4 class="attorney-name">Nikko</h4>
                     <h4 class="attorney-lastname">Nehoray</h4>
+                </div>
+            </div>
+            <div class="attorney-card" data-dept="operations" data-office="headquarters">
+                <img src="/wp-content/themes/nehoray-law/assets/img/MarkAlcantara.jpg" alt="Mark Alcantara">
+                <div class="attorney-info">
+                    <span class="attorney-role">Assistant</span>
+                    <h4 class="attorney-name">Mark</h4>
+                    <h4 class="attorney-lastname">Alcantara</h4>
                 </div>
             </div>
 
