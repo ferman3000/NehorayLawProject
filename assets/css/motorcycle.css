@@ -86,11 +86,11 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 30px;
-    font-family: 'Times New Roman', serif;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif; /* unificado al stack serif del tema */
 }
 
 .clark-highlight-gold {
-    color: var(--clark-accent);
+    color: #111111; /* énfasis en negrita oscura, 18.9:1 (WCAG 1.4.3) */
     font-weight: 700;
 }
 
@@ -120,4 +120,41 @@
     .cta-number {
         font-size: 1.8rem;
     }
+}
+/* --- THE REALITY OF RISK: autopistas de fondo con máscara oscura (mismo estilo que philosophy-flag) --- */
+.clark-philosophy-box.philosophy-road {
+    position: relative;
+    background: #111111; /* respaldo oscuro si la foto no carga (texto siempre legible) */
+    border: 2px solid var(--clark-accent, #c5a059);
+    overflow: hidden;
+}
+
+.clark-philosophy-box.philosophy-road::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../img/redwood-road.jpg') center/cover no-repeat;
+    /* Foto alojada en el tema (Licencia Unsplash, uso comercial permitido) */
+    filter: grayscale(100%) brightness(0.45);
+    opacity: 0.65;
+    /* Desaturada + máscara: peor caso oscuro (título dorado grande 3.4:1 ≥ 3:1, cuerpo claro 6.2:1 — WCAG 1.4.3) */
+}
+
+.clark-philosophy-box.philosophy-road > * {
+    position: relative;
+    z-index: 2;
+}
+
+.clark-philosophy-box.philosophy-road .clark-philosophy-title {
+    color: var(--clark-accent, #c5a059);
+    /* Dorado de marca intacto sobre el fondo oscuro */
+}
+
+.clark-philosophy-box.philosophy-road p {
+    color: #e2e8f0;
+}
+
+.clark-philosophy-box.philosophy-road .clark-highlight-gold {
+    color: #ffffff; /* énfasis en blanco sobre el fondo oscuro (9:1); el dorado no alcanza 4.5:1 en texto pequeño sobre la foto */
+    font-weight: 700;
 }

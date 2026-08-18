@@ -170,10 +170,11 @@
 .cta-number {
     display: block;
     font-size: 2.2rem;
-    font-family: serif;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif; /* unificado al stack serif del tema */
     color: var(--accent, #c5a059);
     font-weight: 700;
     text-decoration: none;
+    /* Dorado de marca sobre la caja oscura del .pull-quote: 7.7:1 (WCAG 1.4.3) */
 }
 
 /* Responsive */

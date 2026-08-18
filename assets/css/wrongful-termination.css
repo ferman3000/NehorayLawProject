@@ -106,7 +106,7 @@
 }
 
 .strategy-col h4 {
-    color: #c5a059;
+    color: #111111; /* etiqueta oscura, 18.9:1 (WCAG 1.4.3) */
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -139,7 +139,7 @@
     margin-top: 15px;
     font-family: "Playfair Display", serif;
     font-weight: 700;
-    color: #c5a059;
+    color: #111111; /* énfasis oscuro, 18.9:1 (WCAG 1.4.3) */
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 1px;

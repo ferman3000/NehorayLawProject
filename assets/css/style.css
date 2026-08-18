@@ -22,10 +22,10 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    background: #f8fafc;
+    background: #111111; /* fondo oscuro: el dorado de marca queda en 7.7:1 (WCAG 1.4.3) */
     padding: 10px 20px;
     border-radius: 50px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--accent, #c5a059);
 }
 
 .call-cta span {
@@ -36,8 +36,14 @@
 
 .phone-link {
     text-decoration: none;
-    color: var(--primary);
+    color: #ffffff; /* sobre el fondo oscuro de la píldora (18.9:1) */
     font-weight: 800;
+}
+
+.phone-link:hover,
+.phone-link:focus,
+.phone-link:active {
+    color: #ffffff; /* anula el a:hover azul del style.css base, invisible sobre la píldora oscura */
 }
 
 
@@ -3135,8 +3141,7 @@
 }
 
 .faq-item summary:hover {
-    color: #c5a059;
-    /* Dorado al pasar el mouse */
+    /* El texto se mantiene oscuro (WCAG 1.4.3); la señal de hover es el anillo del icono */
 }
 
 .question-text {
@@ -3153,7 +3158,8 @@
 
 /* CUANDO ESTÁ ABIERTO */
 .faq-item[open] summary {
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 2px solid var(--accent, #c5a059);
+    /* Línea dorada estable mientras la pregunta está abierta */
 }
 
 /* Rotación del ícono al abrir (opcional, convierte el + en x o simplemente gira) */
@@ -3225,15 +3231,13 @@
 .pull-quote {
     text-align: center;
     font-size: 1.4rem;
-    font-family: 'Times New Roman', serif;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif; /* unificado al stack serif del tema */
     padding: 50px;
-    background: #f9f9f9;
-    background-color: #f9f9f9;
-    /* Ensure bg color applies */
-    border: 1px solid #e2e8f0;
+    background: #111111; /* caja oscura unificada (WCAG 1.4.3) */
+    background-color: #111111;
     border-top: 4px solid var(--clark-accent, #c5a059);
     margin: 60px 30px 20px;
-    color: var(--clark-primary, #111);
+    color: #ffffff;
 }
 
 .gold-text {

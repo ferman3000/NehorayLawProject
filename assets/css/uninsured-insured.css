@@ -78,7 +78,7 @@
 }
 
 .warning-box strong {
-    color: var(--clark-accent);
+    color: var(--clark-primary, #111111); /* énfasis oscuro, 18:1 (WCAG 1.4.3) — igual que .highlight-box strong */
 }
 
 /* --- GRID LAYOUT (Matches Auto Accidents Advice Grid) --- */

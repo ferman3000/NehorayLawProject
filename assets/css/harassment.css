@@ -84,7 +84,7 @@
 }
 
 .winning-gold {
-    color: #c5a059;
+    color: #111111; /* énfasis oscuro, 18.9:1 (WCAG 1.4.3) */
     font-weight: 800;
     text-transform: uppercase;
 }

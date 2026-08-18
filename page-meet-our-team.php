@@ -945,7 +945,7 @@ get_header();
             <div class="attorney-card" data-dept="operations" data-office="headquarters">
                 <img src="/wp-content/themes/nehoray-law/assets/img/MarkAlcantara.jpg" alt="Mark Alcantara">
                 <div class="attorney-info">
-                    <span class="attorney-role">Assistant</span>
+                    <span class="attorney-role">Assistant to the COO</span>
                     <h4 class="attorney-name">Mark</h4>
                     <h4 class="attorney-lastname">Alcantara</h4>
                 </div>

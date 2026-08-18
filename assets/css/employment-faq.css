@@ -33,6 +33,12 @@
     padding-bottom: 25px;
 }
 
+.faq-item[open] summary {
+    border-bottom: 2px solid var(--accent, #c5a059);
+    /* Línea dorada estable mientras la pregunta está abierta (decorativa, dorado de marca intacto) */
+    margin-bottom: 12px;
+}
+
 /* --- QUESTION (SUMMARY) --- */
 .faq-item summary {
     list-style: none;
@@ -61,21 +67,58 @@
 }
 
 .faq-item summary:hover .question-text {
-    color: #c5a059;
-    /* Gold on hover */
+    /* El texto se mantiene oscuro (WCAG 1.4.3); el hover lo señala el chip del icono */
 }
 
 /* --- ICON --- */
 .icon {
-    font-size: 1.5rem;
-    color: #c5a059;
-    font-weight: 300;
-    transition: transform 0.3s ease;
+    /* Anillo fantasma: borde dorado + cruz oscura dibujada con CSS
+       (centrado perfecto, sin depender de la métrica del carácter "+") */
+    position: relative;
+    font-size: 0; /* oculta el "+" de texto */
+    background: #ffffff;
+    border: 2px solid var(--accent, #c5a059);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.icon::before,
+.icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #111111; /* cruz oscura: 18.9:1 en reposo, 7.1:1 sobre dorado al hover (WCAG 1.4.11) */
+    border-radius: 1px;
+}
+
+.icon::before {
+    width: 14px;
+    height: 2px;
+}
+
+.icon::after {
+    width: 2px;
+    height: 14px;
+}
+
+.faq-item summary:hover .icon {
+    background: var(--accent, #c5a059);
+    /* Al hover se rellena de dorado con el símbolo oscuro (7.1:1), como los botones fantasma */
+    transform: scale(1.1);
 }
 
 .faq-item[open] .icon {
     transform: rotate(45deg);
     /* Turn + into x */
+}
+
+.faq-item[open] summary:hover .icon {
+    transform: rotate(45deg) scale(1.15);
 }
 
 /* --- ANSWER --- */
@@ -85,7 +128,34 @@
     font-size: 1rem;
     line-height: 1.7;
     color: #475569;
-    animation: fadeIn 0.4s ease;
+    animation: faqSlideDown 0.45s ease;
+}
+
+@keyframes faqSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apertura con altura animada en navegadores modernos (Chrome 129+);
+   los demás abren normal con el deslizamiento de arriba */
+.faq-item {
+    interpolate-size: allow-keywords;
+}
+
+.faq-item::details-content {
+    height: 0;
+    overflow: clip;
+    transition: height 0.45s ease, content-visibility 0.45s allow-discrete;
+}
+
+.faq-item[open]::details-content {
+    height: auto;
 }
 
 .answer-text p {

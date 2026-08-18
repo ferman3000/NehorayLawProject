@@ -32,7 +32,7 @@
 }
 
 .highlight-gold {
-    color: var(--clark-accent);
+    color: #111111; /* énfasis en negrita oscura, 18.9:1 (WCAG 1.4.3) — mismo tratamiento que clark-highlight-gold */
     font-weight: 700;
 }
 

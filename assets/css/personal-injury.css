@@ -33,7 +33,7 @@
 }
 
 .clark-highlight-gold {
-    color: var(--clark-accent);
+    color: #111111; /* énfasis en negrita oscura, 18.9:1 (WCAG 1.4.3) */
     font-weight: 700;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .clark-hero h1 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif; /* unificado al stack serif del tema */
     /* Distinctive serif */
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -113,7 +113,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 20px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif; /* unificado al stack serif del tema */
 }
 
 .clark-separator {
@@ -156,7 +156,7 @@
 
 .clark-list-item:hover {
     background: #f8fafc;
-    border-bottom-color: var(--clark-accent);
+    /* La línea dorada se reemplazó por el resplandor dorado en el texto */
 }
 
 .clark-list-icon {
@@ -170,6 +170,16 @@
 
 .clark-accordion-wrapper[open] .clark-list-icon {
     transform: rotate(90deg);
+}
+
+/* Hover: la flecha dorada se desliza hacia el texto y crece (señal de hover animada) */
+.clark-list-item:hover .clark-list-icon,
+.clark-accordion-summary:hover .clark-list-icon {
+    transform: translateX(6px) scale(1.25);
+}
+
+.clark-accordion-wrapper[open] .clark-accordion-summary:hover .clark-list-icon {
+    transform: rotate(90deg) scale(1.25);
 }
 
 
@@ -201,8 +211,7 @@
 
 .clark-accordion-summary:hover .clark-list-text,
 a.clark-list-text:hover {
-    color: var(--clark-accent) !important;
-    transition: color 0.3s ease;
+    /* El texto no cambia (18.9:1, WCAG 1.4.3); el hover lo señala la flecha animada */
 }
 
 .clark-accordion-content {
@@ -366,7 +375,7 @@ a.clark-list-text:hover {
 }
 
 .pull-quote {
-    background: var(--primary);
+    background: var(--primary, #111111);
     color: white;
     padding: 40px;
     font-size: 1.5rem;
@@ -692,11 +701,11 @@ a.clark-list-text:hover {
 }
 
 .clark-content-row h3 {
-    color: var(--clark-accent);
+    color: #111111; /* 18.9:1 sobre blanco (WCAG 1.4.3); el acento dorado lo da la barra lateral del bloque */
     font-size: 1.3rem;
     text-transform: uppercase;
     margin-bottom: 15px;
-    font-family: 'Times New Roman', serif;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif; /* unificado al stack serif del tema */
     letter-spacing: 1px;
 }
 
@@ -807,4 +816,44 @@ a.clark-list-text:hover {
         padding: 20px;
     }
 
+}
+/* --- WE FIGHT FOR YOU: bandera de fondo con máscara oscura (tono del header) --- */
+.clark-philosophy-box.philosophy-flag {
+    position: relative;
+    background: #111111; /* respaldo oscuro si la foto no carga (texto siempre legible) */
+    border: 2px solid var(--clark-accent);
+    overflow: hidden;
+}
+
+.clark-philosophy-box.philosophy-flag::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../img/usa-flag-skyline.jpg') center/cover no-repeat;
+    /* Foto alojada en el tema (Licencia Unsplash, uso comercial permitido) */
+    filter: grayscale(100%) brightness(0.45);
+    opacity: 0.65;
+    /* Desaturada + máscara: máxima presencia de la bandera que mantiene el peor caso
+       oscuro (título dorado grande 3.4:1 ≥ 3:1, cuerpo claro 6.2:1 — WCAG 1.4.3) */
+}
+
+.clark-philosophy-box.philosophy-flag > * {
+    position: relative;
+    z-index: 2;
+}
+
+.clark-philosophy-box.philosophy-flag .clark-philosophy-title {
+    color: var(--clark-accent);
+    /* Dorado de marca intacto sobre el fondo oscuro */
+}
+
+.clark-philosophy-box.philosophy-flag .clark-subtext {
+    color: #e2e8f0;
+}
+
+.clark-philosophy-box.philosophy-flag .clark-strong-gold {
+    color: var(--clark-accent);
+    font-weight: 700;
+    font-size: 1.2rem;
+    /* Tamaño "grande" WCAG (≥18.66px bold): con la bandera visible el peor caso da 3.5:1 ≥ 3:1 */
 }
