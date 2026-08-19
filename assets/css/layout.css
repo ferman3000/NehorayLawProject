@@ -6,6 +6,16 @@ html {
     scroll-padding-bottom: 220px;
 }
 
+/* WCAG 2.4.7 — Foco visible: anillo doble para navegación por teclado.
+   Interior oscuro (visible sobre fondos claros) + exterior dorado de marca
+   (visible sobre fondos oscuros). Solo aparece con teclado (:focus-visible);
+   el !important derrota los outline:none históricos del tema sin editarlos. */
+*:focus-visible {
+    outline: 3px solid var(--accent, #c5a059) !important;
+    outline-offset: 2px !important;
+    box-shadow: 0 0 0 5px #111111 !important;
+}
+
 @charset "UTF-8";
 
 /* ==========================================================================
