@@ -11,17 +11,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     mobileBtn.style.cursor = "pointer";
 
+    function actualizarEstado(abierto) {
+        mobileBtn.textContent = abierto ? "✕" : "☰";
+        mobileBtn.setAttribute("aria-expanded", abierto ? "true" : "false");
+        mobileBtn.setAttribute("aria-label", abierto ? "Close menu" : "Open menu");
+    }
+
     mobileBtn.addEventListener("click", function (e) {
         e.preventDefault();
-        console.log("Hamburger clicked");
-
         navLinks.classList.toggle("active");
+        actualizarEstado(navLinks.classList.contains("active"));
+    });
 
-        // Toggle Icon
-        if (navLinks.classList.contains("active")) {
-            mobileBtn.textContent = "✕";
-        } else {
-            mobileBtn.textContent = "☰";
+    // Cerrar con Escape (estándar de menús accesibles)
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && navLinks.classList.contains("active")) {
+            navLinks.classList.remove("active");
+            actualizarEstado(false);
+            mobileBtn.focus();
         }
     });
 
@@ -29,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("click", function (event) {
         if (!navLinks.contains(event.target) && !mobileBtn.contains(event.target) && navLinks.classList.contains("active")) {
             navLinks.classList.remove("active");
-            mobileBtn.textContent = "☰";
+            actualizarEstado(false);
         }
     });
 });

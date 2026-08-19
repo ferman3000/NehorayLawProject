@@ -39,5 +39,5 @@
                 <span class="lang-opt">ES</span>
             </div> -->
         </div>
-        <div class="mobile-menu">☰</div>
+        <button class="mobile-menu" aria-label="Open menu" aria-expanded="false">☰</button>
     </nav>

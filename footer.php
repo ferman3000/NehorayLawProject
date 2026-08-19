@@ -20,9 +20,11 @@
         </div>
         <div class="footer-links">
             <a href="<?php echo home_url('/'); ?>">Home</a>
-            <!-- <a href="#">About Us</a> -->
             <a href="<?php echo home_url('/practice-areas'); ?>">Practice Areas</a>
-            <!-- <a href="#">Disclaimer</a> -->
+            <a href="<?php echo home_url('/meet-our-team'); ?>">Meet Our Team</a>
+            <a href="<?php echo home_url('/testimonies'); ?>">Testimonials</a>
+            <a href="<?php echo home_url('/blog'); ?>">Blog</a>
+            <a href="<?php echo home_url('/contact'); ?>">Contact</a>
             <a href="<?php echo home_url('/privacy-policy'); ?>">Privacy Policy</a>
         </div>
         <p>&copy; <?php echo date('Y'); ?> Nehoray Law Firm. All Rights Reserved. Attorney Advertising.</p>
