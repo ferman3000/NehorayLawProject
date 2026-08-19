@@ -66,8 +66,12 @@
 
 /* Resaltar correos o datos importantes */
 .legal-highlight {
-    color: var(--accent, #c5a059);
+    color: #475569; /* 7.6:1 sobre blanco — antes dorado 2.46:1 (WCAG 1.4.3) */
     font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: var(--accent, #c5a059); /* subrayado dorado de marca, decorativo */
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
 }
 
 /* Responsive */

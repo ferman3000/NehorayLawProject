@@ -171,7 +171,7 @@
 
 .blog-meta {
     font-size: 0.75rem;
-    color: var(--neho-gold);
+    color: #475569; /* metadata en gris oscuro, 7.6:1 — antes dorado 2.46:1 (WCAG 1.4.3) */
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -429,9 +429,11 @@
 }
 
 .widget_recent_comments ul li .comment-author-link,
-.widget_recent_comments ul li .comment-author-link a {
+.widget_recent_comments ul li .comment-author-link a,
+.wp-block-latest-comments a {
     background-color: transparent !important;
     color: var(--neho-gold) !important;
+    /* Dorado de marca sobre el pie oscuro: 7.7:1 (WCAG 1.4.3) — antes azul royal 3.9:1 */
 }
 
 /* Specific fix for the black block */
@@ -513,7 +515,9 @@
 }
 
 .comment-list li.comment a {
-    color: var(--neho-gold);
+    color: #475569; /* 7.6:1 sobre blanco — antes dorado 2.46:1 (WCAG 1.4.3) */
+    text-decoration: underline;
+    text-decoration-color: var(--neho-gold, #c5a059); /* acento dorado decorativo */
 }
 
 /* Meta Data (Author, Date, Avatar) */
@@ -700,4 +704,12 @@
 .form-submit .submit:hover {
     background: #b08d4b;
     transform: translateY(-2px);
+}
+
+/* ── Widget de búsqueda (bloque de WordPress) ── */
+.wp-block-search__button,
+.widget-area .wp-block-search__button {
+    background: var(--neho-gold, #c5a059) !important;
+    color: #1a1a1a !important; /* carbón sobre dorado, 7.1:1 (WCAG 1.4.3) — patrón de botones del sitio */
+    border: none;
 }
