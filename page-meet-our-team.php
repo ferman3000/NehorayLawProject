@@ -902,10 +902,10 @@ get_header();
                     <h4 class="attorney-lastname">R.</h4>
                 </div>
             </div>
-            <div class="attorney-card" data-dept="admin" data-office="headquarters">
-                <img src="/wp-content/themes/nehoray-law/assets/img/placeholder-silhouette.png" alt="Edva Palero">
+            <div class="attorney-card" data-dept="workers-comp" data-office="headquarters">
+                <img src="/wp-content/themes/nehoray-law/assets/img/EdvaPalero.jpg" alt="Edva Palero">
                 <div class="attorney-info">
-                    <span class="attorney-role">Assistant</span>
+                    <span class="attorney-role">Administrative Assistant</span>
                     <h4 class="attorney-name">Edva</h4>
                     <h4 class="attorney-lastname">Palero</h4>
                 </div>
@@ -916,6 +916,15 @@ get_header();
                     <span class="attorney-role">Intern</span>
                     <h4 class="attorney-name">Emera</h4>
                     <h4 class="attorney-lastname">Harris</h4>
+                </div>
+            </div>
+            <div class="attorney-card" data-dept="admin" data-office="headquarters">
+                <img src="/wp-content/themes/nehoray-law/assets/img/CarmenBesana.jpg" alt="Carmen Besana">
+                <div class="attorney-info">
+                    <span class="attorney-role">Backoffice</span>
+                    <span class="attorney-role-secondary">Admin Assistant</span>
+                    <h4 class="attorney-name">Carmen</h4>
+                    <h4 class="attorney-lastname">Besana</h4>
                 </div>
             </div>
 

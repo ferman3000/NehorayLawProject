@@ -83,12 +83,15 @@
 }
 
 .founder-role {
-    color: var(--accent, #c5a059);
+    color: #111111; /* etiqueta oscura, 18:1 sobre gris claro (WCAG 1.4.3) */
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 25px;
     font-size: 0.9rem;
+    display: inline-block;
+    border-bottom: 2px solid var(--accent, #c5a059); /* subrayado dorado decorativo */
+    padding-bottom: 6px;
 }
 
 .founder-quote {
@@ -152,7 +155,7 @@
 
 .filter-row-label {
     font-size: 0.7rem;
-    color: #999;
+    color: #64748b; /* 4.8:1 sobre blanco — antes #999 con 2.85:1 (WCAG 1.4.3) */
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 700;
@@ -196,7 +199,7 @@
     padding: 9px 16px;
     border: none;
     background: transparent;
-    color: #888;
+    color: #999; /* 5.9:1 sobre la barra oscura — antes #888 pasaba raspando con 4.7:1 (WCAG 1.4.3) */
     font-family: inherit;
     font-size: 0.8rem;
     font-weight: 500;
@@ -236,7 +239,7 @@
 
 .filter-mobile-label {
     font-size: 0.7rem;
-    color: #999;
+    color: #64748b; /* 4.8:1 sobre blanco — igual que filter-row-label (WCAG 1.4.3) */
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 700;
@@ -282,7 +285,7 @@
 }
 
 .team-results-count span {
-    color: var(--accent, #C5A059);
+    color: #111111; /* número oscuro, 18.9:1 (WCAG 1.4.3) */
     font-weight: 600;
 }
 
@@ -615,7 +618,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    color: #C5A059;
+    color: #111111; /* handle oscuro (WCAG 1.4.3); el icono conserva el dorado de marca */
     font-size: 0.5em;
     font-weight: 600;
     text-transform: uppercase;
@@ -627,17 +630,22 @@
 }
 
 .founder-ig:hover {
-    color: #d4b46a;
+    color: #111111;
+}
+
+.founder-ig:hover svg {
+    color: #d4b46a; /* el icono es de trazo (stroke=currentColor): el color viaja por "color", nunca por fill */
 }
 
 .founder-ig:visited,
 .founder-ig:active {
-    color: #C5A059;
+    color: #111111;
 }
 
 .founder-ig svg {
     width: 22px;
     height: 22px;
+    color: #C5A059; /* icono dorado decorativo — de trazo, el fill debe quedar en none */
 }
 
 .attorney-social {

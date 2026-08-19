@@ -113,9 +113,9 @@ Again Thank you!!!!"
         <div class="platforms-row">
             <p class="platforms-title">Top Rated On</p>
             <div class="platform-badges">
-                <span style="color: var(--accent);">GOOGLE REVIEWS</span>
-                <span >AVVO.COM</span>
-                <span style="color: var(--accent);">YELP</span>
+                <span>GOOGLE REVIEWS</span>
+                <span>AVVO.COM</span>
+                <span>YELP</span>
                 <span>SUPER LAWYERS</span>
             </div>
         </div>

@@ -99,8 +99,8 @@
 }
 
 .review-stars {
-    color: #f59e0b;
-    /* Estrellas doradas/naranjas */
+    color: #B45309;
+    /* Estrellas ámbar oscuro: 4.7:1 sobre blanco (WCAG 1.4.3) — no es el dorado de marca */
     margin-bottom: 20px;
     font-size: 1.2rem;
     position: relative;
@@ -155,11 +155,12 @@
 
 .author-info span {
     font-size: 0.85rem;
-    color: #94a3b8;
+    color: #475569; /* 7.6:1 sobre blanco — antes #94a3b8 con 2.56:1 (WCAG 1.4.3) */
 }
 
 .verified-badge {
-    color: #10b981;
+    /* El color lo hereda de .author-info span (#475569) — la regla de color verde
+       que vivía aquí nunca aplicó por especificidad (regla muerta, eliminada) */
     margin-left: 5px;
 }
 
@@ -188,5 +189,5 @@
     flex-wrap: wrap;
     font-size: 1.2rem;
     font-weight: 800;
-    color: #cbd5e1;
+    color: #111111; /* las 4 plataformas unificadas en negro, estilo logos de prensa (18.9:1 — WCAG 1.4.3); antes 2 doradas 2.35:1 y 2 grises 1.42:1 */
 }
