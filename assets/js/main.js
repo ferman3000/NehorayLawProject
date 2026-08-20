@@ -22,7 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll(".accordion-link");
     const contentArea = document.getElementById("primary");
 
-    if (contentArea) {
+    // Practice Areas only: #primary now exists on every page (WCAG landmark),
+    // so gate on the accordion links, which are exclusive to that template.
+    if (contentArea && links.length > 0) {
         // Load default content (Personal Injury)
         loadContent('personal-injury');
 

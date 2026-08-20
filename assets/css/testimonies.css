@@ -151,6 +151,7 @@
     margin: 0;
     color: #111;
     font-weight: 700;
+    font-size: 1rem; /* mismo tamaño que tenía como h4 — el cambio a h3 es solo semántico */
 }
 
 .author-info span {
