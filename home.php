@@ -25,7 +25,8 @@
                         <a href="<?php the_permalink(); ?>">
                             <?php 
                             if ( has_post_thumbnail() ) {
-                                the_post_thumbnail('medium_large');
+                                // Alt = título del artículo: el enlace de imagen anuncia su destino (WCAG 1.1.1 / 2.4.4)
+                                the_post_thumbnail('medium_large', array('alt' => the_title_attribute(array('echo' => false))));
                             } else {
                                 // Fallback gris por si no hay foto
                                 echo '<div style="background:#f0f0f0; height:100%; width:100%;"></div>';

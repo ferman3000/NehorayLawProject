@@ -14,7 +14,7 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Law Offices Of Bob Nehoray</title>
+    <?php // Título generado por WordPress (title-tag): único por página (WCAG 2.4.2) ?>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
