@@ -6,6 +6,14 @@ html {
     scroll-padding-bottom: 220px;
 }
 
+/* WCAG 1.4.10 — Reflow: recorta el desborde horizontal residual (verificado
+   que todo el contenido cabe en 320px; lo que se recorta es área vacía).
+   "clip" en vez de "hidden" para no romper position:sticky */
+html,
+body {
+    overflow-x: clip;
+}
+
 /* WCAG 2.4.7 — Foco visible: anillo doble para navegación por teclado.
    Interior oscuro (visible sobre fondos claros) + exterior dorado de marca
    (visible sobre fondos oscuros). Solo aparece con teclado (:focus-visible);

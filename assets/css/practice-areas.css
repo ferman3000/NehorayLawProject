@@ -149,7 +149,9 @@
 
 @media (max-width: 900px) {
     .practice-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+        /* minmax(0,1fr): la columna no crece por contenido ancho — evita el
+           scroll horizontal en pantallas de 320px (WCAG 1.4.10) */
         margin-top: 0;
     }
 

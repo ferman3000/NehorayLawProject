@@ -498,7 +498,9 @@ footer p {
 /* RESPONSIVE CONTACT (MOBILE FIX) */
 @media (max-width: 900px) {
     .contact-section {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+        /* minmax(0,1fr): la columna no crece por contenido ancho — evita el
+           scroll horizontal en pantallas de 320px (WCAG 1.4.10) */
         padding: 60px 20px;
         gap: 30px;
     }
@@ -1144,5 +1146,12 @@ footer p {
         padding: 15px 30px;
         width: 100%;
         justify-content: center;
+    }
+}
+
+/* WCAG 1.4.10 — Reflow: en pantallas muy angostas el teléfono cabe en una línea */
+@media (max-width: 400px) {
+    .phone-display {
+        font-size: 1.9rem;
     }
 }
