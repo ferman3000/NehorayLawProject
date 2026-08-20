@@ -4,6 +4,7 @@
  */
 
 get_header(); ?>
+<main id="primary">
 
     <section class="legal-hero">
         <h1>Privacy Policy</h1>
@@ -78,4 +79,5 @@ get_header(); ?>
         </div>
     </section>
 
+</main>
 <?php get_footer(); ?>

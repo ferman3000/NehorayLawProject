@@ -4,6 +4,7 @@
  */
 
 get_header(); ?>
+<main id="primary">
 
 <section class="hero-contact">
         <div class="hero-content">
@@ -58,11 +59,11 @@ get_header(); ?>
 
             <div class="channel-grid">
                 <div class="channel-item">
-                    <h4>Phone</h4>
+                    <h3>Phone</h3>
                     <p>(888) 595-4LAW</p>
                 </div>
                 <!-- <div class="channel-item">
-                    <h4>Live Chat</h4>
+                    <h3>Live Chat</h3>
                     <p style="color: var(--accent);">24/7 Support</p>
                 </div> -->
             </div>
@@ -107,4 +108,5 @@ get_header(); ?>
 
     </div>
 
+</main>
 <?php get_footer(); ?>

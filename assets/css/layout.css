@@ -14,6 +14,28 @@ body {
     overflow-x: clip;
 }
 
+/* WCAG 2.4.1 — Skip link: primer elemento tabulable; invisible hasta
+   recibir foco de teclado, entonces aparece sobre la nav */
+.skip-link {
+    position: fixed;
+    top: -100px;
+    left: 16px;
+    z-index: 10000;
+    background: #111111;
+    color: #ffffff;
+    border: 2px solid var(--accent, #c5a059);
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+    top: 12px;
+}
+
 /* WCAG 2.4.7 — Foco visible: anillo doble para navegación por teclado.
    Interior oscuro (visible sobre fondos claros) + exterior dorado de marca
    (visible sobre fondos oscuros). Solo aparece con teclado (:focus-visible);

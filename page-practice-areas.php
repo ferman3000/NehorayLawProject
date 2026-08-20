@@ -85,7 +85,7 @@ include 'header.php'; ?>
     </aside> 
 
     <!-- RIGHT CONTENT: DYNAMIC AREA -->
-    <main id="dynamic-content">
+    <main id="primary">
         <div class="loading-container">
             <p>Loading content...</p>
         </div>

@@ -7,6 +7,7 @@
 
 get_header();
 ?>
+<main id="primary">
 
     <section class="hero">
         <div class="hero-content">
@@ -245,7 +246,7 @@ get_header();
             </p>
 
             <div class="urgent-call">
-                <h4>Immediate Assistance 24/7</h4>
+                <h3>Immediate Assistance 24/7</h3>
                 <a href="tel:888-555-0123" class="phone-display">(888) 595-4LAW</a>
                 <p style="margin-top: 10px; font-size: 0.9rem; color: #64748b; text-align: center;">Se Habla Español</p>
             </div>
@@ -287,5 +288,6 @@ get_header();
 
     </section>
 
+</main>
 <?php
 get_footer();

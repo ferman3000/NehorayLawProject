@@ -5,6 +5,7 @@
 
 get_header(); 
 ?>
+<main id="primary">
 
 <div class="page-attributes">
 <section class="hero-attorneys">
@@ -1016,4 +1017,5 @@ get_header();
     </section>
 </div>
 
+</main>
 <?php get_footer(); ?>

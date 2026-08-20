@@ -123,7 +123,7 @@
 }
 
 /* Right Content Area */
-#dynamic-content {
+#primary {
     min-height: 500px;
     background: white;
     padding: 40px;
@@ -162,7 +162,7 @@
     }
 
     /* FIX: Reduce padding to prevent overflow on mobile */
-    #dynamic-content {
+    #primary {
         padding: 20px 15px;
         min-height: auto;
         /* Allow height to adjust */

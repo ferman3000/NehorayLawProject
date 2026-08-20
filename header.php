@@ -18,6 +18,7 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<a class="skip-link" href="#primary">Skip to main content</a>
 
     <nav>
         <div class="logo">

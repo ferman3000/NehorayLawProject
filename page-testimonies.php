@@ -4,6 +4,7 @@
  */
 
 get_header(); ?>
+<main id="primary">
 
     <section class="hero-results">
         <div class="hero-content">
@@ -29,7 +30,7 @@ get_header(); ?>
                 <div class="review-author">
                     <div class="author-avatar">J</div>
                     <div class="author-info">
-                        <h4>Jessica Ortiz <span class="verified-badge">✔</span></h4>
+                        <h3>Jessica Ortiz <span class="verified-badge">✔</span></h3>
                         <span>Laboral Compensation</span>
                     </div>
                 </div>
@@ -43,7 +44,7 @@ get_header(); ?>
                 <div class="review-author">
                     <div class="author-avatar">K</div>
                     <div class="author-info">
-                        <h4>Krashawndra Edwards <span class="verified-badge">✔</span></h4>
+                        <h3>Krashawndra Edwards <span class="verified-badge">✔</span></h3>
                         <span>Laboral Compensation</span>
                     </div>
                 </div>
@@ -57,7 +58,7 @@ get_header(); ?>
                 <div class="review-author">
                     <div class="author-avatar">C</div>
                     <div class="author-info">
-                        <h4>Chris Garbutt <span class="verified-badge">✔</span></h4>
+                        <h3>Chris Garbutt <span class="verified-badge">✔</span></h3>
                         <span>-</span>
                     </div>
                 </div>
@@ -72,7 +73,7 @@ Thank so much for all your hard work."
                 <div class="review-author">
                     <div class="author-avatar">F</div>
                     <div class="author-info">
-                        <h4>Frank Mendez <span class="verified-badge">✔</span></h4>
+                        <h3>Frank Mendez <span class="verified-badge">✔</span></h3>
                         <span>-</span>
                     </div>
                 </div>
@@ -86,7 +87,7 @@ Thank so much for all your hard work."
                 <div class="review-author">
                     <div class="author-avatar">T</div>
                     <div class="author-info">
-                        <h4>Tracie R. <span class="verified-badge">✔</span></h4>
+                        <h3>Tracie R. <span class="verified-badge">✔</span></h3>
                         <span>-</span>
                     </div>
                 </div>
@@ -102,7 +103,7 @@ Again Thank you!!!!"
                 <div class="review-author">
                     <div class="author-avatar">R</div>
                     <div class="author-info">
-                        <h4>Ronda Galvan. <span class="verified-badge">✔</span></h4>
+                        <h3>Ronda Galvan. <span class="verified-badge">✔</span></h3>
                         <span>-</span>
                     </div>
                 </div>
@@ -122,4 +123,5 @@ Again Thank you!!!!"
 
     </section>
 
+</main>
 <?php get_footer(); ?>

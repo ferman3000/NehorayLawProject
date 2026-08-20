@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // --- DYNAMIC CONTENT FETCHING ---
     const links = document.querySelectorAll(".accordion-link");
-    const contentArea = document.getElementById("dynamic-content");
+    const contentArea = document.getElementById("primary");
 
     if (contentArea) {
         // Load default content (Personal Injury)

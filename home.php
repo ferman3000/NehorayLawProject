@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<main id="primary">
 
 <section class="hero-blog">
     <div class="hero-content">
@@ -73,4 +74,5 @@
     </div>
 </div>
 
+</main>
 <?php get_footer(); ?>
