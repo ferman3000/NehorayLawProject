@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.2.0' );
+	define( '_S_VERSION', '1.2.2' );
 }
 
 /**
@@ -226,13 +226,13 @@ function nehoraynew_scripts() {
 
     // --- CHATBOT WIDGET INTEGRATION ---
     // Enqueue CSS
-    wp_enqueue_style( 'nehoray-chat-css', get_template_directory_uri() . '/assets/css/chat-widget.css', array(), '1.0' );
+    wp_enqueue_style( 'nehoray-chat-css', get_template_directory_uri() . '/assets/css/chat-widget.css', array(), _S_VERSION );
     
     // Enqueue JS Configuration (No dependencies)
-    wp_enqueue_script( 'nehoray-chat-config', get_template_directory_uri() . '/assets/js/chat-config.js', array(), '1.0', true );
+    wp_enqueue_script( 'nehoray-chat-config', get_template_directory_uri() . '/assets/js/chat-config.js', array(), _S_VERSION, true );
     
     // Enqueue JS Engine (Depends on Config)
-    wp_enqueue_script( 'nehoray-chat-engine', get_template_directory_uri() . '/assets/js/chat-engine.js', array('nehoray-chat-config'), '1.0', true );
+    wp_enqueue_script( 'nehoray-chat-engine', get_template_directory_uri() . '/assets/js/chat-engine.js', array('nehoray-chat-config'), _S_VERSION, true );
     
     // Localize Script to pass PHP variables to JS (like the Logo URL)
     wp_localize_script( 'nehoray-chat-engine', 'nehorayChatParams', array(

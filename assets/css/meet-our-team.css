@@ -407,7 +407,7 @@
     background: rgba(255, 255, 255, 0.06);
 }
 
-.referral-item h4 {
+.referral-item h3 {
     color: var(--accent, #c5a059);
     font-size: 1.2rem;
     margin-bottom: 15px;

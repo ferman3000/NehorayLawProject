@@ -994,17 +994,17 @@ get_header();
 
             <div class="referral-grid">
                 <div class="referral-item">
-                    <h4>New Revenue Streams</h4>
+                    <h3>New Revenue Streams</h3>
                     <p>Many of our referrals come from attorneys who do not currently offer legal services in many of our practice areas. By referring your client to us, you can ensure they get the legal assistance they need while simultaneously creating a new virtual practice area within your firm.</p>
                 </div>
 
                 <div class="referral-item">
-                    <h4>Complex Litigation Support</h4>
+                    <h3>Complex Litigation Support</h3>
                     <p>We routinely handle complex matters for firms lacking the time or resources to battle large defendants. Our experienced and aggressive attorneys often obtain results superior to solo practitioners with limited financial resources.</p>
                 </div>
 
                 <div class="referral-item">
-                    <h4>Out-of-State Partners</h4>
+                    <h3>Out-of-State Partners</h3>
                     <p>We are the ideal partner for out-of-state attorneys with clients needing representation in California. Our multi-disciplinary approach covers all your client's needs in one stop.</p>
                 </div>
             </div>

@@ -247,8 +247,8 @@ get_header();
 
             <div class="urgent-call">
                 <h3>Immediate Assistance 24/7</h3>
-                <a href="tel:888-555-0123" class="phone-display">(888) 595-4LAW</a>
-                <p style="margin-top: 10px; font-size: 0.9rem; color: #64748b; text-align: center;">Se Habla Español</p>
+                <span class="phone-display">(888) 595-4LAW</span>
+                <p style="margin-top: 10px; font-size: 0.9rem; text-align: center;">Se Habla Español</p>
             </div>
         </div> 
 
