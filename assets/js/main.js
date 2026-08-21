@@ -46,7 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
             // Fade Out
             contentArea.style.opacity = '0.5';
 
-            fetch(`${nehorayData.themeUrl}/content/${key}.html`)
+            // Cache-buster tied to the theme version so deploys refresh cached modules
+            fetch(`${nehorayData.themeUrl}/content/${key}.html?v=${nehorayData.version || ''}`)
                 .then(response => {
                     if (!response.ok) throw new Error("Content not found");
                     return response.text();
