@@ -689,6 +689,12 @@
         height: 210px;
         padding: 18px 20px 22px;
     }
+
+    /* La tarjeta crece con su contenido: foto 286px + info 210px no caben en 420px fijos
+       y Safari iOS recortaba el apellido (overflow hidden). */
+    .attorney-card {
+        height: auto;
+    }
 }
 
 .attorney-card.clickable {

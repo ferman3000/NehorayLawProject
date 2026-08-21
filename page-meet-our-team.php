@@ -34,10 +34,12 @@ get_header();
 
             <div class="founder-info-col">
                 <h3 class="founder-name">Bob Nehoray
+                    <!-- Instagram de Bob: oculto por petición del equipo (2026-08-21)
                     <a class="founder-ig" href="https://www.instagram.com/kingofworkcomp?igsh=cG1kbW95bmJsYmI0" target="_blank" rel="noopener noreferrer" aria-label="Bob Nehoray on Instagram">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                         <span>@kingofworkcomp</span>
                     </a>
+                    -->
                 </h3>
                 <div class="founder-role">Founder & Lead Attorney</div>
                 
@@ -912,14 +914,6 @@ get_header();
                 </div>
             </div>
             <div class="attorney-card" data-dept="admin" data-office="headquarters">
-                <img src="/wp-content/themes/nehoray-law/assets/img/EmeraHarris.jpg" alt="Emera Harris">
-                <div class="attorney-info">
-                    <span class="attorney-role">Intern</span>
-                    <h4 class="attorney-name">Emera</h4>
-                    <h4 class="attorney-lastname">Harris</h4>
-                </div>
-            </div>
-            <div class="attorney-card" data-dept="admin" data-office="headquarters">
                 <img src="/wp-content/themes/nehoray-law/assets/img/CarmenBesana.jpg" alt="Carmen Besana">
                 <div class="attorney-info">
                     <span class="attorney-role">Backoffice</span>
@@ -928,8 +922,24 @@ get_header();
                     <h4 class="attorney-lastname">Besana</h4>
                 </div>
             </div>
+            <div class="attorney-card" data-dept="admin" data-office="headquarters">
+                <img src="/wp-content/themes/nehoray-law/assets/img/EmeraHarris.jpg" alt="Emera Harris">
+                <div class="attorney-info">
+                    <span class="attorney-role">Intern</span>
+                    <h4 class="attorney-name">Emera</h4>
+                    <h4 class="attorney-lastname">Harris</h4>
+                </div>
+            </div>
 
             <!-- OPERATIONS DEPARTMENT -->
+            <div class="attorney-card" data-dept="operations" data-office="headquarters">
+                <img src="/wp-content/themes/nehoray-law/assets/img/MarkAlcantara.jpg" alt="Mark Alcantara">
+                <div class="attorney-info">
+                    <span class="attorney-role">Assistant to the COO</span>
+                    <h4 class="attorney-name">Mark</h4>
+                    <h4 class="attorney-lastname">Alcantara</h4>
+                </div>
+            </div>
             <div class="attorney-card" data-dept="operations" data-office="headquarters" data-bio="Steve Adler is the Chief Operating Officer at the Law Offices of Bob Nehoray, where he oversees firm operations, growth strategy, organizational development, and process innovation across multiple offices throughout California.|Born and raised in San Diego, Steve brings a diverse business and leadership background spanning media, sports partnerships, operations, and organizational management. Prior to entering legal operations, he owned and operated his own business, where he successfully negotiated and managed partnership agreements with organizations including the Major League Baseball Players Association, the National Baseball Hall of Fame and Museum, and numerous universities throughout the country.|Earlier in his career, Steve was a sports talk show host in San Diego with iHeartRadio, where he developed a strong foundation in communication, public engagement, and relationship building.|Steve graduated from University of Redlands, where he was selected by his peers for membership in the Whitehead Leadership Society in recognition of his leadership and community involvement.|Outside of his professional role, Steve remains actively involved in his community. He serves as a commissioner on the Arts &amp; Culture Committee for the City of Goodyear and is a board member of the Litchfield Elementary School District Education Foundation, supporting educational initiatives and community development programs.|Known for his leadership style, operational mindset, and ability to build meaningful professional relationships, Steve continues to focus on organizational growth, innovation, and creating scalable systems that support both clients and teams.">
                 <img src="/wp-content/themes/nehoray-law/assets/img/SteveAdler.jpg" alt="Steve Adler">
                 <div class="attorney-info">
@@ -938,6 +948,7 @@ get_header();
                     <h4 class="attorney-lastname">Adler</h4>
                 </div>
             </div>
+            <!-- Nikko Nehoray: oculto por petición del equipo (2026-08-21)
             <div class="attorney-card" data-dept="operations" data-office="headquarters">
                 <img src="/wp-content/themes/nehoray-law/assets/img/Nikko.jpg" alt="Nikko">
                 <div class="attorney-info">
@@ -952,14 +963,7 @@ get_header();
                     <h4 class="attorney-lastname">Nehoray</h4>
                 </div>
             </div>
-            <div class="attorney-card" data-dept="operations" data-office="headquarters">
-                <img src="/wp-content/themes/nehoray-law/assets/img/MarkAlcantara.jpg" alt="Mark Alcantara">
-                <div class="attorney-info">
-                    <span class="attorney-role">Assistant to the COO</span>
-                    <h4 class="attorney-name">Mark</h4>
-                    <h4 class="attorney-lastname">Alcantara</h4>
-                </div>
-            </div>
+            -->
 
         </div>
 
