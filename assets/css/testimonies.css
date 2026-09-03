@@ -62,7 +62,7 @@
 
 .reviews-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr)); /* min(): en viewports <350px la tarjeta no desborda (WCAG 1.4.10) */
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;

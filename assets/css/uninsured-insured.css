@@ -97,8 +97,8 @@
     border-radius: 0 0 4px 4px;
 }
 
-.solution-col h4,
-.risk-col h4 {
+.solution-col h3,
+.risk-col h3 {
     font-family: "Playfair Display", serif;
     font-size: 1.5rem;
     color: var(--clark-primary);

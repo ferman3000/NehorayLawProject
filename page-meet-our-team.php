@@ -184,6 +184,14 @@ get_header();
                 </div>
             </div>
 
+            <div class="attorney-card" data-dept="attorneys" data-office="palm-desert">
+                <img src="/wp-content/themes/nehoray-law/assets/img/placeholder-silhouette.png" alt="Roberto Maciel">
+                <div class="attorney-info">
+                    <span class="attorney-role">Attorney</span>
+                    <h4 class="attorney-name">Roberto</h4>
+                    <h4 class="attorney-lastname">Maciel</h4>
+                </div>
+            </div>
 
             <!-- PERSONAL INJURY DEPARTMENT -->
             <div class="attorney-card" data-dept="personal-injury" data-office="headquarters" data-bio="Jackie Martinez is the Personal Injury Manager who oversees the day-to-day operations of the firm's personal injury department, ensuring that all cases progress efficiently and in alignment with the firm's standards of excellence. With 25 years of experience in the personal injury field, Jackie brings deep industry knowledge, strong leadership, and a results-driven approach to every matter she manages.|She specializes in a wide range of personal injury cases, including motor vehicle accidents, premises liability, wrongful death, and dog bite claims. Jackie's extensive background in risk management, and both pre-litigation and litigation enables her to effectively manage case strategy, anticipate challenges, and support the legal team in maximizing client recovery.|In her role, Jackie supervises case workflows, oversees documentation and discovery, and works closely with case managers, attorneys, clients, medical providers, and insurance carriers to ensure seamless case handling. Her attention to detail and organizational expertise help maintain well-developed files that are positioned for successful outcomes.">
@@ -423,6 +431,15 @@ get_header();
                     <h4 class="attorney-lastname">Rodriguez</h4>
                 </div>
             </div>
+            <div class="attorney-card" data-dept="workers-comp" data-office="oakland">
+                <img src="/wp-content/themes/nehoray-law/assets/img/SergioMonteon.jpg" alt="Sergio Monteon">
+                <div class="attorney-info">
+                    <span class="attorney-role">Workers' Compensation</span>
+                    <span class="attorney-role-secondary">Case Manager</span>
+                    <h4 class="attorney-name">Sergio</h4>
+                    <h4 class="attorney-lastname">Monteon</h4>
+                </div>
+            </div>
             <div class="attorney-card" data-dept="workers-comp" data-office="headquarters">
                 <img src="/wp-content/themes/nehoray-law/assets/img/MichelleHernandez.jpg" alt="Michelle Hernandez">
                 <div class="attorney-info">
@@ -437,6 +454,14 @@ get_header();
                     <span class="attorney-role">Jr. Case Manager</span>
                     <h4 class="attorney-name">Ashley</h4>
                     <h4 class="attorney-lastname">Nadeau</h4>
+                </div>
+            </div>
+            <div class="attorney-card" data-dept="workers-comp" data-office="modesto">
+                <img src="/wp-content/themes/nehoray-law/assets/img/JasmineParra.jpg" alt="Jasmine Parra">
+                <div class="attorney-info">
+                    <span class="attorney-role">Jr. Case Manager</span>
+                    <h4 class="attorney-name">Jasmine</h4>
+                    <h4 class="attorney-lastname">Parra</h4>
                 </div>
             </div>
 
@@ -548,12 +573,60 @@ get_header();
                     <h4 class="attorney-lastname">Salcedo</h4>
                 </div>
             </div>
+            <div class="attorney-card" data-dept="workers-comp" data-office="headquarters">
+                <img src="/wp-content/themes/nehoray-law/assets/img/placeholder-silhouette.png" alt="Jesus Diaz">
+                <div class="attorney-info">
+                    <span class="attorney-role">Assistant Case Manager</span>
+                    <h4 class="attorney-name">Jesus</h4>
+                    <h4 class="attorney-lastname">Diaz</h4>
+                </div>
+            </div>
+            <div class="attorney-card" data-dept="workers-comp" data-office="headquarters">
+                <img src="/wp-content/themes/nehoray-law/assets/img/placeholder-silhouette.png" alt="Enrique Lopez">
+                <div class="attorney-info">
+                    <span class="attorney-role">Assistant Case Manager</span>
+                    <h4 class="attorney-name">Enrique</h4>
+                    <h4 class="attorney-lastname">Lopez</h4>
+                </div>
+            </div>
+            <div class="attorney-card" data-dept="workers-comp" data-office="headquarters">
+                <img src="/wp-content/themes/nehoray-law/assets/img/placeholder-silhouette.png" alt="Andrian Ramirez">
+                <div class="attorney-info">
+                    <span class="attorney-role">Assistant Case Manager</span>
+                    <h4 class="attorney-name">Andrian</h4>
+                    <h4 class="attorney-lastname">Ramirez</h4>
+                </div>
+            </div>
+            <div class="attorney-card" data-dept="workers-comp" data-office="headquarters">
+                <img src="/wp-content/themes/nehoray-law/assets/img/placeholder-silhouette.png" alt="Kevin Uribe">
+                <div class="attorney-info">
+                    <span class="attorney-role">Assistant Case Manager</span>
+                    <h4 class="attorney-name">Kevin</h4>
+                    <h4 class="attorney-lastname">Uribe</h4>
+                </div>
+            </div>
+            <div class="attorney-card" data-dept="workers-comp" data-office="headquarters">
+                <img src="/wp-content/themes/nehoray-law/assets/img/placeholder-silhouette.png" alt="Jade Romero">
+                <div class="attorney-info">
+                    <span class="attorney-role">Assistant Case Manager</span>
+                    <h4 class="attorney-name">Jade</h4>
+                    <h4 class="attorney-lastname">Romero</h4>
+                </div>
+            </div>
+            <div class="attorney-card" data-dept="workers-comp" data-office="headquarters">
+                <img src="/wp-content/themes/nehoray-law/assets/img/BrayanMartinez.jpg" alt="Brayan Martinez">
+                <div class="attorney-info">
+                    <span class="attorney-role">Assistant Case Manager</span>
+                    <h4 class="attorney-name">Brayan</h4>
+                    <h4 class="attorney-lastname">Martinez</h4>
+                </div>
+            </div>
 
             <!-- INTAKE DEPARTMENT -->
             <div class="attorney-card" data-dept="intake" data-office="headquarters">
                 <img src="/wp-content/themes/nehoray-law/assets/img/SamanthaMarten.jpg" alt="Samantha Marten">
                 <div class="attorney-info">
-                    <span class="attorney-role">Intake Operations Manager</span>
+                    <span class="attorney-role">Intake Department Manager</span>
                     <h4 class="attorney-name">Samantha</h4>
                     <h4 class="attorney-lastname">Marten</h4>
                 </div>
@@ -581,6 +654,14 @@ get_header();
                     <span class="attorney-role">Intake Representative</span>
                     <h4 class="attorney-name">Valentina</h4>
                     <h4 class="attorney-lastname">Rodriguez</h4>
+                </div>
+            </div>
+            <div class="attorney-card" data-dept="intake" data-office="headquarters">
+                <img src="/wp-content/themes/nehoray-law/assets/img/ChristopherMccarron.jpg" alt="Christopher Mccarron">
+                <div class="attorney-info">
+                    <span class="attorney-role">Intake Representative</span>
+                    <h4 class="attorney-name">Christopher</h4>
+                    <h4 class="attorney-lastname">Mccarron</h4>
                 </div>
             </div>
             <div class="attorney-card" data-dept="intake" data-office="headquarters">
@@ -759,6 +840,14 @@ get_header();
                     <h4 class="attorney-lastname">Reyes</h4>
                 </div>
             </div>
+            <div class="attorney-card" data-dept="medical" data-office="headquarters">
+                <img src="/wp-content/themes/nehoray-law/assets/img/placeholder-silhouette.png" alt="Laura Neuta">
+                <div class="attorney-info">
+                    <span class="attorney-role">Medical Team</span>
+                    <h4 class="attorney-name">Laura</h4>
+                    <h4 class="attorney-lastname">Neuta</h4>
+                </div>
+            </div>
 
             <!-- Q.M.E. DEPARTMENT -->
             <div class="attorney-card" data-dept="qme" data-office="headquarters">
@@ -802,14 +891,22 @@ get_header();
                     <h4 class="attorney-lastname">Bundac</h4>
                 </div>
             </div>
+            <div class="attorney-card" data-dept="qme" data-office="headquarters">
+                <img src="/wp-content/themes/nehoray-law/assets/img/AtharvaGaikwad.jpg" alt="Atty Gaikwad">
+                <div class="attorney-info">
+                    <span class="attorney-role">Legal Assistant</span>
+                    <h4 class="attorney-name">Atty</h4>
+                    <h4 class="attorney-lastname">Gaikwad</h4>
+                </div>
+            </div>
 
             <!-- MARKETING DEPARTMENT -->
             <div class="attorney-card" data-dept="marketing" data-office="headquarters">
-                <img src="/wp-content/themes/nehoray-law/assets/img/JamieDoe.jpg" alt="Jamie Doe">
+                <img src="/wp-content/themes/nehoray-law/assets/img/AlexisLedesma.jpg" alt="Alexis Ledesma">
                 <div class="attorney-info">
-                    <span class="attorney-role">Brand & Partnerships Manager</span>
-                    <h4 class="attorney-name">Jamie</h4>
-                    <h4 class="attorney-lastname">Doe</h4>
+                    <span class="attorney-role">Business Development Manager</span>
+                    <h4 class="attorney-name">Alexis</h4>
+                    <h4 class="attorney-lastname">Ledesma</h4>
                 </div>
             </div>
             <div class="attorney-card" data-dept="marketing" data-office="headquarters">
@@ -818,14 +915,6 @@ get_header();
                     <span class="attorney-role">Social Media Content Creator</span>
                     <h4 class="attorney-name">Valentina</h4>
                     <h4 class="attorney-lastname">Villamil</h4>
-                </div>
-            </div>
-            <div class="attorney-card" data-dept="marketing" data-office="headquarters">
-                <img src="/wp-content/themes/nehoray-law/assets/img/KatrinaMalijan.jpg" alt="Katrina Malijan">
-                <div class="attorney-info">
-                    <span class="attorney-role">Marketing Admin</span>
-                    <h4 class="attorney-name">Katrina</h4>
-                    <h4 class="attorney-lastname">Malijan</h4>
                 </div>
             </div>
             <div class="attorney-card" data-dept="marketing" data-office="headquarters">
@@ -906,7 +995,7 @@ get_header();
                 </div>
             </div>
             <div class="attorney-card" data-dept="workers-comp" data-office="headquarters">
-                <img src="/wp-content/themes/nehoray-law/assets/img/EdvaPalero.jpg" alt="Edva Palero">
+                <img src="/wp-content/themes/nehoray-law/assets/img/EdvaPalero.jpg?v=2" alt="Edva Palero">
                 <div class="attorney-info">
                     <span class="attorney-role">Administrative Assistant</span>
                     <h4 class="attorney-name">Edva</h4>
