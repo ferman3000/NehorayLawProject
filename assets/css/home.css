@@ -590,6 +590,10 @@ footer p {
     line-height: 0;
 }
 
+.sms-consent-checkbox .wpcf7-list-item-label {
+    line-height: 1.5; /* el line-height:0 del wrap (alineacion del checkbox) no debe alcanzar al texto multilinea */
+}
+
 .sms-consent-checkbox .wpcf7-acceptance {
     display: inline;
 }

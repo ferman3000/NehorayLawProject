@@ -45,7 +45,7 @@ get_header(); ?>
                 <li>Message and data rates may apply</li>
                 <li>You may opt out at any time by replying <strong>STOP</strong></li>
             </ul>
-            <p>Mobile information will not be shared with third parties for marketing or promotional purposes. We may share mobile data only with trusted service providers that assist us in delivering communications or operating our services, and solely for operational purposes.</p>
+            <p>We do not sell or share your SMS opt-in data or personal information with third parties for marketing purposes. Mobile information, including mobile phone numbers and SMS opt-in data and consent, will not be shared with third parties or affiliates for marketing or promotional purposes.</p>
 
             <h2>4. Sharing of Information</h2>
             <p>We do not sell your personal information. We may share information only:</p>
@@ -55,6 +55,7 @@ get_header(); ?>
                 <li>To protect the rights, safety, or property of our firm or others</li>
             </ul>
             <p>All shared information is limited to what is reasonably necessary for these purposes.</p>
+            <p>All of the above excludes SMS opt-in data and consent; this information will not be shared with any third parties.</p>
 
             <h2>5. Data Security</h2>
             <p>We implement reasonable administrative, technical, and physical safeguards designed to protect your personal information from unauthorized access, disclosure, or misuse. However, no method of transmission over the internet is 100% secure.</p>

@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.2.5' );
+	define( '_S_VERSION', '1.2.6' );
 }
 
 /**
@@ -163,8 +163,8 @@ function nehoraynew_scripts() {
         wp_enqueue_style( 'nehoray-testimonies', get_template_directory_uri() . '/assets/css/testimonies.css', array('nehoraynew-style'), _S_VERSION );
     }
 
-    // Conditional Load for Privacy Policy Page
-    if ( is_page_template( 'page-privacy-policy.php' ) || is_page('privacy-policy') ) {
+    // Conditional Load for Privacy Policy and Terms of Service pages (shared legal styles)
+    if ( is_page_template( 'page-privacy-policy.php' ) || is_page('privacy-policy') || is_page_template( 'page-terms-of-service.php' ) || is_page('terms-of-service') ) {
         wp_enqueue_style( 'nehoray-privacy', get_template_directory_uri() . '/assets/css/privacy.css', array('nehoraynew-style'), _S_VERSION );
     }
 

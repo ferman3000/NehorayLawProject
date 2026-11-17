@@ -26,6 +26,7 @@
             <a href="<?php echo home_url('/blog'); ?>">Blog</a>
             <a href="<?php echo home_url('/contact'); ?>">Contact</a>
             <a href="<?php echo home_url('/privacy-policy'); ?>">Privacy Policy</a>
+            <a href="<?php echo home_url('/terms-of-service'); ?>">Terms of Service</a>
         </div>
         <p>&copy; <?php echo date('Y'); ?> Nehoray Law Firm. All Rights Reserved. Attorney Advertising.</p>
     </footer>
